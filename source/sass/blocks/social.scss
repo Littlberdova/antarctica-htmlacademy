@@ -1,23 +1,21 @@
 .social__list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .social__item:not(:last-child) {
+  @include vp-1023 {
+    margin-right: 28px;
+  }
 
-    @include vp-1023 {
-        margin-right: 28px;
-    }
+  @include vp-767 {
+    margin-right: 23px;
+  }
 
-    @include vp-767 {
-        margin-right: 23px;
-    }
-    
-    @include vp-319 {
-        margin-right: 23px;
-    }
-    
+  @include vp-319 {
+    margin-right: 23px;
+  }
 }

@@ -1,29 +1,28 @@
 .options {
-    margin: 0;
-    padding: 0;
-    width: 208px;
-    list-style-type: none;
-    display: none;
-
+  margin: 0;
+  padding: 0;
+  width: 208px;
+  list-style-type: none;
+  display: none;
 }
 
 .options__name {
-    margin:0;
-    margin-bottom: 10px;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 19px;
-    color: rgba(249, 251, 253, 1);
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: rgba(249, 251, 253, 1);
 }
 
 .options__descriotion {
-    margin: 0;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 19px;
-    color: rgba(216, 216, 217, 1);
+  margin: 0;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: rgba(216, 216, 217, 1);
 }
 
 .options__item:not(:last-child) {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }

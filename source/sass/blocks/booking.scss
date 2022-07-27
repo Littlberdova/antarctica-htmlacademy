@@ -1,166 +1,157 @@
 .booking {
-
-    @include vp-1023 {
-
-        background-image: url("../img/booking-bg-desktop.jpg");
-        background-repeat: no-repeat;
-        background-position: center ;
-        background-size: cover;
-
-    @include retina {
-        background-image: url("../img/booking-bg-desktop@2x.png");
-        background-repeat: no-repeat;
-        background-position: center ;
-        background-size: cover;
-    }
-        
-        
-
-    }
-    
-
-    @include vp-767 {
-
-        background-image: url("../img/booking-bg-tablet.jpg");
-        background-repeat: no-repeat;
-        background-position: center ;
-        background-size: cover;
+  @include vp-1023 {
+    background-image: url("../img/booking-bg-desktop.jpg");
+    background-color: rgba(71, 126, 162, 1);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
     @include retina {
-        background-image: url("../img/booking-bg-tablet@2x.jpg");
-        background-repeat: no-repeat;
-        background-position: center ;
-        background-size: cover;
+      background-image: url("../img/booking-bg-desktop@2x.png");
+      background-color: rgba(71, 126, 162, 1);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
     }
-       
-    }
-    
-    @include vp-319 {
-        background-image: url("../img/booking-bg-mobile.jpg");
-        background-repeat: no-repeat;
-        background-position: center ;
-        background-size: cover;
+  }
+
+  @include vp-767 {
+    background-image: url("../img/booking-bg-tablet.jpg");
+    background-color: rgba(71, 126, 162, 1);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
     @include retina {
-        background-image: url("../img/booking-bg-mobile@2x.jpg");
-        background-repeat: no-repeat;
-        background-position: center ;
-        background-size: cover;
+      background-image: url("../img/booking-bg-tablet@2x.jpg");
+      background-color: rgba(71, 126, 162, 1);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
     }
+  }
+
+  @include vp-319 {
+    background-image: url("../img/booking-bg-mobile.jpg");
+    background-color: rgba(71, 126, 162, 1);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include retina {
+      background-image: url("../img/booking-bg-mobile@2x.jpg");
+      background-color: rgba(71, 126, 162, 1);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
     }
+  }
 }
 
 .booking__wrapper {
+  display: flex;
 
-    display: flex;
-    
-    @include vp-1023 {
-        width: 1160px;
-        margin: 0 auto;
-        padding-top: 50px;
-        padding-bottom: 50px;
-        padding-left: 60px;
-        padding-right: 60px;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
+  @include vp-1023 {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 60px;
+    padding-right: 60px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    @include vp-767 {
+  @include vp-767 {
+    width: auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 175px;
+    padding-right: 175px;
+    flex-direction: column;
+    align-items: center;
+  }
 
-        width: auto;
-        padding-top: 100px;
-        padding-bottom: 100px;
-        padding-left: 175px;
-        padding-right: 175px;
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    @include vp-319 {
-        width: auto;
-        padding-top: 65px;
-        padding-bottom: 65px;
-        padding-left: 15px;
-        padding-right: 15px;
-        flex-direction: column;
-        align-items: center;
-    }
+  @include vp-319 {
+    width: auto;
+    padding-top: 65px;
+    padding-bottom: 65px;
+    padding-left: 15px;
+    padding-right: 15px;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .booking__title {
+  margin: 0;
+  font-weight: 700;
+  word-wrap: break-word;
+
+  @include vp-1023 {
+    font-size: 40px;
+    line-height: 60px;
     margin: 0;
-    font-weight: 700;
-    word-wrap: break-word;
+    margin-bottom: 30px;
+    width: 493px;
+  }
 
-    @include vp-1023 {
-        font-size: 40px;
-        line-height: 60px;
-        margin: 0;
-        margin-bottom: 30px;
-        width: 493px;
-    }
-    
+  @include vp-767 {
+    font-size: 34px;
+    line-height: 51px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 25px;
+    width: 419px;
+    text-align: center;
+  }
 
-    @include vp-767 {
-        font-size: 34px;
-        line-height: 51px;
-        margin-right: auto;
-        margin-left: auto;
-        margin-bottom: 25px;
-        width: 419px;  
-        text-align: center;
-    }
-    
-    @include vp-319 {
-        font-size: 24px;
-        line-height: 31px;
-        margin-right: auto;
-        margin-left: auto;
-        margin-bottom: 25px;
-        width: 194px; 
-        text-align: center; 
-    }
+  @include vp-319 {
+    font-size: 24px;
+    line-height: 31px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 25px;
+    width: 194px;
+    text-align: center;
+  }
 }
 
 .booking__description-container {
+  @include vp-767 {
+    margin-bottom: 60px;
+  }
 
-    @include vp-767 {
-        margin-bottom: 60px;
-    }
-    
-    @include vp-319 {
-        margin-bottom: 40px;
-    }
-
+  @include vp-319 {
+    margin-bottom: 40px;
+  }
 }
 
 .booking__offer-description {
+  margin: 0;
+  word-wrap: break-word;
+
+  @include vp-1023 {
+    font-size: 18px;
+    line-height: 27px;
+    width: 352px;
     margin: 0;
-    word-wrap: break-word;
+    text-align: left;
+  }
 
-    @include vp-1023 {
-        font-size: 18px;
-        line-height: 27px;
-        width: 352px;
-        margin: 0;
-        text-align: left;
-    }
-    
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 27px;
+    width: 352px;
+    margin: 0 auto;
+  }
 
-    @include vp-767 {
-        font-size: 18px;
-        line-height: 27px;
-        width: 352px;
-        margin: 0 auto;
-    }
-    
-    @include vp-319 {
-        font-size: 16px;
-        line-height: 22px;
-        width: 257px;
-        text-align: center;
-    }
+  @include vp-319 {
+    font-size: 16px;
+    line-height: 22px;
+    width: 257px;
+    text-align: center;
+  }
 }

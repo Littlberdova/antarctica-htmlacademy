@@ -1,95 +1,122 @@
 .form__wrapper {
-    background-color: rgba(1, 28, 64, 1);
-    display: flex;
-    flex-direction: column;
+  background-color: rgba(1, 28, 64, 1);
+  display: flex;
+  flex-direction: column;
 
-    @include vp-1023 {
-        width: 403px;
-        padding: 50px;
-    }
-    
+  @include vp-1023 {
+    width: 403px;
+    padding: 50px;
+  }
 
-    @include vp-767 {
-        width: 403px;
-        padding: 50px;  
-    }
-    
-    @include vp-319 {
-        width: 290px;
-        padding-top: 40px;
-        padding-bottom: 40px;
-        padding-left: 30px;
-        padding-right: 30px;
-    }
+  @include vp-767 {
+    width: 403px;
+    padding: 50px;
+  }
+
+  @include vp-319 {
+    width: 290px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 .form__description {
-    color: rgba(249, 251, 253, 1);
-    font-weight: 500;
+  color: rgba(249, 251, 253, 1);
+  font-weight: 500;
 
-    @include vp-1023 {
-        font-size: 18px;
-        line-height: 27px;
-        margin: 0;
-        margin-bottom: 35px;
-    }
-    
+  @include vp-1023 {
+    font-size: 18px;
+    line-height: 27px;
+    margin: 0;
+    margin-bottom: 35px;
+  }
 
-    @include vp-319 {
-        font-size: 18px;
-        line-height: 25px;
-        text-align: center;
-        margin-bottom: 35px;
-    }
-    
+
+  @include vp-319 {
+    font-size: 18px;
+    line-height: 25px;
+    text-align: center;
+    margin-bottom: 35px;
+  }
 }
 
 .form__inputs-list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .form__input-item:not(:last-child) {
-    margin-bottom: 31px;
+  margin-bottom: 31px;
 }
 
-.form__input {
-    background-color: rgba(249, 251, 253, 1);
-    border: none;
-    padding-top: 11px;
-    padding-bottom: 11px;
-    padding-left: 16px;
-    padding-right: 16px;
-    width: 100%;
+.form__input-item input {
+  background-color: rgba(249, 251, 253, 1);
+  border: none;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 100%;
 }
 
 .form__button {
-    background-color: rgba(249, 251, 253, 1);
-    border: none;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 21px;
+  background-color: rgba(249, 251, 253, 1);
+  border: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
 }
 
 .form__accept-wrapper {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    padding-top: 20px;
-    padding-bottom: 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
 }
 
 .form__accept-label {
-    color: rgba(249, 251, 253, 1);
-    font-size: 10px;
-    line-height: 13px;
-    margin-left: 5px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.form__mark::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: rgba(249, 251, 253, 1);
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.form__label {
+  color: rgba(249, 251, 253, 1);
+  font-size: 10px;
+  line-height: 13px;
+  margin-left: 24px;
+}
+
+.form__accept-wrapper input[type="checkbox"]:checked ~ .form__accept-label .form__mark::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 6px;
+  background-image: url("../img/check.svg");
+  background-repeat: no-repeat;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
