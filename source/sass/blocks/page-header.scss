@@ -3,16 +3,13 @@
   background-size: cover;
   background-position: center;
   background-color: rgba(1, 28, 64, 1);
+  background-image: url("../img/background-desktop.jpg");
 
-  @include vp-1023 {
-    background-image: url("../img/background-desktop.jpg");
-
-    @include retina {
-      background-image: url("../img/background-desktop@2x.jpg");
-    }
+  @include retina {
+    background-image: url("../img/background-desktop@2x.jpg");
   }
 
-  @include vp-767 {
+  @include vp-1023 {
     background-image: url("../img/background-tablet.jpg");
 
     @include retina {
@@ -20,8 +17,8 @@
     }
   }
 
-  @include vp-319 {
-    height: 538px;
+  @include vp-767 {
+    height: 503px;
     background-image: url("../img/background-mobile.jpg");
 
     @include retina {
@@ -36,27 +33,25 @@
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
+  margin: 0 auto;
+  max-width: 1160px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 35px;
+  padding-bottom: 577px;
 
   @include vp-1023 {
-    margin: 0 auto;
-    max-width: 1160px;
-    padding: 0;
-    padding-top: 35px;
-    padding-bottom: 577px;
-  }
-
-  @include vp-767 {
     padding-bottom: 593px;
-    padding-top: 30px;
+    padding-top: 21px;
     margin: 0;
     width: auto;
     padding-left: 45px;
     padding-right: 45px;
   }
 
-  @include vp-319 {
+  @include vp-767 {
     padding-bottom: 458px;
-    padding-top: 20px;
+    padding-top: 3px;
     margin: 0;
     width: auto;
     padding-left: 15px;
@@ -65,21 +60,20 @@
 }
 
 .page-header__wrapper--opened {
-  @include vp-1023 {
-    margin: 0 auto;
-    max-width: 1160px;
-    padding: 0;
-    padding-top: 35px;
-    padding-bottom: 577px;
-    background-color: transparent;
-    position: relative;
+  margin: 0 auto;
+  max-width: 1160px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 35px;
+  padding-bottom: 577px;
+  background-color: transparent;
+  position: relative;
 
-    .page-header__logo-icon {
-      fill: rgba(249, 251, 253, 1);
-    }
+  .page-header__logo-icon {
+    fill: rgba(249, 251, 253, 1);
   }
 
-  @include vp-767 {
+  @include vp-1023 {
     padding-bottom: 593px;
     padding-top: 30px;
     margin: 0;
@@ -94,7 +88,7 @@
     }
   }
 
-  @include vp-319 {
+  @include vp-767 {
     width: 285px;
     background-color: rgba(249, 251, 253, 1);
     position: absolute;
@@ -107,21 +101,20 @@
 }
 
 .page-header__wrapper--nojs {
-  @include vp-319 {
+  @include vp-767 {
     background-color: unset;
   }
 }
 
 .page-header__logo-icon {
+  fill: rgba(249, 251, 253, 1);
+
   @include vp-1023 {
     fill: rgba(249, 251, 253, 1);
+    width: 42px;
   }
 
   @include vp-767 {
-    fill: rgba(249, 251, 253, 1);
-  }
-
-  @include vp-319 {
     fill: rgba(249, 251, 253, 1);
   }
 }

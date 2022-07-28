@@ -793,6 +793,7 @@ button,
   background-size: cover;
   background-position: center;
   background-color: #011c40;
+  background-image: url("../img/background-desktop.jpg");
 }
 
 .page-header__wrapper {
@@ -809,18 +810,62 @@ button,
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  margin: 0 auto;
+  max-width: 1160px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 35px;
+  padding-bottom: 577px;
+}
+
+.page-header__wrapper--opened {
+  margin: 0 auto;
+  max-width: 1160px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 35px;
+  padding-bottom: 577px;
+  background-color: transparent;
+  position: relative;
+}
+
+.page-header__wrapper--opened .page-header__logo-icon {
+  fill: #f9fbfd;
+}
+
+.page-header__logo-icon {
+  fill: #f9fbfd;
+}
+
+.main-nav__toggle {
+  display: none;
 }
 
 .site-nav {
   padding: 0;
   margin: 0;
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.site-nav__item:not(:last-child) {
+  margin-right: 33px;
 }
 
 .site-nav__item-link {
   font-weight: 500;
   padding-top: 13px;
   padding-bottom: 13px;
+  font-size: 16px;
+  line-height: 20px;
+  color: #f9fbfd;
 }
 
 .site-nav__item-link:hover {
@@ -835,11 +880,21 @@ button,
 .main-offer {
   background-color: transparent;
   z-index: 2;
+  -webkit-transform: translateY(-170px);
+  -ms-transform: translateY(-170px);
+  transform: translateY(-170px);
 }
 
 .main-offer__wrapper {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-left: 96px;
+  padding-right: 198px;
+  -webkit-transform: translateY(-214px);
+  -ms-transform: translateY(-214px);
+  transform: translateY(-214px);
 }
 
 .main-offer__title {
@@ -848,6 +903,10 @@ button,
   word-break: break-word;
   margin: 0;
   padding: 0;
+  font-size: 54px;
+  line-height: 65px;
+  width: 636px;
+  margin-bottom: 16px;
 }
 
 .main-offer__description {
@@ -856,6 +915,9 @@ button,
   word-break: break-word;
   margin: 0;
   padding: 0;
+  font-size: 20px;
+  line-height: 24px;
+  width: 430px;
 }
 
 .trip__wrapper {
@@ -863,12 +925,30 @@ button,
   box-sizing: border-box;
   display: -ms-grid;
   display: grid;
+  margin: 0 auto;
+  max-width: 1160px;
+  padding-top: 18px;
+  padding-bottom: 120px;
+  padding-left: 10px;
+  padding-right: 10px;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -webkit-column-gap: 88px;
+  -moz-column-gap: 88px;
+  column-gap: 88px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .trip__title {
   margin: 0;
   font-weight: 600;
   word-wrap: break-word;
+  font-size: 28px;
+  line-height: 42px;
+  width: 430px;
+  margin-bottom: 40px;
 }
 
 .trip__description {
@@ -876,6 +956,7 @@ button,
   word-wrap: break-word;
   font-size: 16px;
   line-height: 24px;
+  width: 512px;
 }
 
 .trip__picture {
@@ -890,10 +971,22 @@ button,
   background-size: cover;
 }
 
+.adavantages__container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .adavantages__title {
   margin: 0;
   font-weight: 600;
   text-align: center;
+  margin-bottom: 60px;
+  font-size: 28px;
+  line-height: 42px;
 }
 
 .adavantages__list {
@@ -902,18 +995,65 @@ button,
   list-style-type: none;
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  -webkit-column-gap: 40px;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
+  row-gap: 40px;
 }
 
 .adavantages__list-item {
   position: relative;
   background-color: #f9fbfd;
+  padding-top: 67px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 22px;
+  background-repeat: no-repeat;
+}
+
+.adavantages__list-item:nth-child(1n)::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/boat.svg");
+  left: 30px;
+  top: 22px;
+  width: 27px;
+  height: 32px;
+}
+
+.adavantages__list-item:nth-child(2n)::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/checked.svg");
+  left: 30px;
+  top: 30px;
+  width: 38px;
+  height: 21px;
+}
+
+.adavantages__list-item:nth-child(3n)::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/speedboat.svg");
+  left: 30px;
+  top: 30px;
+  width: 42px;
+  height: 15px;
 }
 
 .adavantages__list-item-name {
   margin: 0;
   font-weight: 500;
   word-wrap: break-word;
-  width: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 27px;
+  max-width: 296px;
 }
 
 .adavantages__list-item-description {
@@ -922,12 +1062,26 @@ button,
   font-size: 14px;
   line-height: 19px;
   width: auto;
+  max-width: 288px;
+}
+
+.tour-catalog__wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-top: 110px;
+  padding-bottom: 120px;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .tour-catalog__title {
   margin: 0 auto;
   font-weight: 600;
   word-wrap: break-word;
+  font-size: 28px;
+  line-height: 42px;
+  width: 302px;
+  margin-bottom: 49px;
 }
 
 .tour-catalog__list {
@@ -936,6 +1090,12 @@ button,
   list-style-type: none;
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  -webkit-column-gap: 30px;
+  -moz-column-gap: 30px;
+  column-gap: 30px;
+  row-gap: 30px;
 }
 
 .tour-catalog__item {
@@ -950,10 +1110,23 @@ button,
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
-  height: 478px;
-  width: 260px;
+  height: 386px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  max-width: 260px;
+  width: unset;
+}
+
+.tour-catalog__item:hover {
+  background-image: none;
+}
+
+.tour-catalog__item:focus-visible {
+  background-image: none;
 }
 
 .tour-catalog__item:hover .tour-catalog__item-options {
@@ -992,6 +1165,70 @@ button,
   margin-bottom: 25px;
 }
 
+.tour-catalog__astoria {
+  background-image: url("../img/tour-1-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.tour-catalog__astoria:hover {
+  background-image: none;
+}
+
+.tour-catalog__astoria:focus-visible {
+  background-image: none;
+}
+
+.tour-catalog__elina {
+  background-image: url("../img/tour-1-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.tour-catalog__atlantis {
+  background-image: url("../img/tour-3-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.tour-catalog__odysseus {
+  background-image: url("../img/tour-4-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.tour-catalog__olympia {
+  background-image: url("../img/tour-5-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.tour-catalog__avrora {
+  background-image: url("../img/tour-6-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.tour-catalog__leonor {
+  background-image: url("../img/tour-7-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.tour-catalog__minion {
+  background-image: url("../img/tour-8-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 .tour-catalog__item-name {
   margin: 0;
   font-weight: 500;
@@ -1003,8 +1240,8 @@ button,
 .tour-catalog__link {
   color: #011c40;
   background-color: #f9fbfd;
-  padding-top: 14px;
-  padding-bottom: 15px;
+  padding-top: 7px;
+  padding-bottom: 6px;
   padding-left: 47px;
   padding-right: 46px;
   font-weight: 600;
@@ -1025,7 +1262,6 @@ button,
 
 .options__name {
   margin: 0;
-  margin-bottom: 10px;
   font-weight: 500;
   font-size: 14px;
   line-height: 19px;
@@ -1041,24 +1277,58 @@ button,
 }
 
 .options__item:not(:last-child) {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+
+.booking {
+  background-image: url("../img/booking-bg-desktop.jpg");
+  background-color: #477ea2;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .booking__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 60px;
+  padding-right: 60px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .booking__title {
-  margin: 0;
   font-weight: 700;
   word-wrap: break-word;
+  font-size: 40px;
+  line-height: 3px;
+  margin: 0;
+  margin-bottom: 39px;
+  width: 493px;
 }
 
 .booking__offer-description {
-  margin: 0;
   word-wrap: break-word;
+  font-size: 18px;
+  line-height: 27px;
+  width: 352px;
+  margin: 0;
+  text-align: left;
 }
 
 .form__wrapper {
@@ -1070,11 +1340,17 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  width: 403px;
+  padding: 50px;
 }
 
 .form__description {
   color: #f9fbfd;
   font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+  margin-bottom: 27px;
 }
 
 .form__inputs-list {
@@ -1094,7 +1370,7 @@ button,
 }
 
 .form__input-item:not(:last-child) {
-  margin-bottom: 31px;
+  margin-bottom: 20px;
 }
 
 .form__input-item input {
@@ -1182,13 +1458,45 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1160px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.contacts__map {
+  width: 560px;
+  min-width: 324px;
+  height: 306px;
+  margin-right: 157px;
 }
 
 .contacts__map iframe {
   width: 100%;
   height: 100%;
+}
+
+.address {
+  width: 560px;
+  min-width: 324px;
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
+  margin-bottom: 0;
 }
 
 .address__notion {
@@ -1198,6 +1506,7 @@ button,
   line-height: 27px;
   width: 500;
   word-wrap: break-word;
+  margin-bottom: 29px;
 }
 
 .address__location {
@@ -1256,6 +1565,26 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1160px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.page-footer__logo-wrapper {
+  margin-right: -320px;
 }
 
 .social__list {
@@ -1269,6 +1598,14 @@ button,
   flex-wrap: wrap;
 }
 
+.social__item:not(:last-child) {
+  margin-right: 28px;
+}
+
+.navigation__wrapper {
+  width: 594px;
+}
+
 .navigation__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1278,11 +1615,21 @@ button,
   list-style-type: none;
   margin: 0;
   padding: 0;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.navigation__item:not(:last-child) {
+  margin-right: 33px;
 }
 
 .navigation__link {
   color: #f9fbfd;
   font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
 }
 
 .navigation__link:hover {
@@ -1308,15 +1655,518 @@ button,
   }
 }
 
-@media (min-width: 319px) {
+@media (max-width: 1439px) {
+  .container {
+    padding: 0 32px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .container {
+    padding: 0 24px;
+  }
+
   .page-header {
-    height: 538px;
+    background-image: url("../img/background-tablet.jpg");
+  }
+
+  .page-header__wrapper {
+    padding-bottom: 593px;
+    padding-top: 21px;
+    margin: 0;
+    width: auto;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .page-header__wrapper--opened {
+    padding-bottom: 593px;
+    padding-top: 30px;
+    margin: 0;
+    width: auto;
+    padding-left: 45px;
+    padding-right: 45px;
+    background-color: transparent;
+    position: relative;
+  }
+
+  .page-header__wrapper--opened .page-header__logo-icon {
+    fill: #f9fbfd;
+  }
+
+  .page-header__logo-icon {
+    fill: #f9fbfd;
+    width: 42px;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__menu--opened .main-nav__menu-wrapper {
+    display: block;
+    width: unset;
+  }
+
+  .main-nav__menu--closed .main-nav__menu-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+
+  .main-nav__menu--nojs .main-nav__menu-wrapper {
+    margin-top: 0;
+  }
+
+  .site-nav__item:not(:last-child) {
+    margin-right: 23px;
+  }
+
+  .site-nav__item-link {
+    font-size: 14px;
+    line-height: 17px;
+    color: #f9fbfd;
+  }
+
+  .main-offer {
+    -webkit-transform: translateY(-270px);
+    -ms-transform: translateY(-270px);
+    transform: translateY(-270px);
+  }
+
+  .main-offer__wrapper {
+    width: auto;
+    margin: 0;
+    padding-left: 45px;
+    padding-right: 45px;
+    -webkit-transform: translateY(-118px);
+    -ms-transform: translateY(-118px);
+    transform: translateY(-118px);
+  }
+
+  .main-offer__title {
+    font-size: 50px;
+    line-height: 60px;
+    width: 589px;
+    margin-bottom: 14px;
+  }
+
+  .main-offer__description {
+    font-size: 18px;
+    line-height: 21px;
+    width: 387px;
+  }
+
+  .trip__wrapper {
+    margin: 0;
+    width: auto;
+    padding-top: 0;
+    padding-bottom: 100px;
+    padding-left: 45px;
+    padding-right: 45px;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    -webkit-transform: translateY(-23px);
+    -ms-transform: translateY(-23px);
+    transform: translateY(-23px);
+  }
+
+  .trip__title {
+    font-size: 26px;
+    line-height: 36px;
+    width: 205px;
+    margin-bottom: 17px;
+  }
+
+  .trip__description {
+    width: 324px;
+  }
+
+  .adavantages__container {
+    width: auto;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 60px;
+    padding-bottom: 100px;
+  }
+
+  .adavantages__title {
+    font-size: 26px;
+    line-height: 39px;
+  }
+
+  .adavantages__list {
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    row-gap: 30px;
+  }
+
+  .adavantages__list-item {
+    padding-top: 59px;
+    padding-left: 17px;
+    padding-right: 17px;
+    padding-bottom: 25px;
+    background-repeat: no-repeat;
+  }
+
+  .adavantages__list-item:nth-child(1n)::before {
+    left: 20px;
+    top: 25px;
+    width: 21px;
+    height: 26px;
+  }
+
+  .adavantages__list-item:nth-child(2n)::before {
+    left: 20px;
+    top: 29px;
+    width: 33px;
+    height: 19px;
+  }
+
+  .adavantages__list-item:nth-child(3n)::before {
+    left: 20px;
+    top: 32px;
+    width: 38px;
+    height: 13px;
+  }
+
+  .adavantages__list-item-name {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 25px;
+    width: auto;
+  }
+
+  .adavantages__list-item-description {
+    width: auto;
+  }
+
+  .tour-catalog__wrapper {
+    width: auto;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .tour-catalog__title {
+    font-size: 26px;
+    line-height: 39px;
+    width: 281px;
+    margin-bottom: 52px;
+  }
+
+  .tour-catalog__list {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    row-gap: 30px;
+  }
+
+  .tour-catalog__item {
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    width: 309px;
+    max-width: 309px;
+  }
+
+  .tour-catalog__astoria {
+    background-image: url("../img/tour-1-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .tour-catalog__elina {
+    background-image: url("../img/tour-1-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .tour-catalog__atlantis {
+    background-image: url("../img/tour-3-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .tour-catalog__odysseus {
+    background-image: url("../img/tour-4-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .tour-catalog__olympia {
+    background-image: url("../img/tour-5-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .tour-catalog__avrora {
+    background-image: url("../img/tour-6-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .tour-catalog__leonor {
+    background-image: url("../img/tour-7-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .tour-catalog__minion {
+    background-image: url("../img/tour-8-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .booking {
+    background-image: url("../img/booking-bg-tablet.jpg");
+    background-color: #477ea2;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .booking__wrapper {
+    width: auto;
+    padding-top: 89px;
+    padding-bottom: 100px;
+    padding-left: 175px;
+    padding-right: 175px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .booking__title {
+    font-size: 34px;
+    line-height: 51px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 4px;
+    width: 419px;
+    text-align: center;
+  }
+
+  .booking__description-container {
+    margin-bottom: 60px;
+  }
+
+  .booking__offer-description {
+    font-size: 18px;
+    line-height: 27px;
+    width: 352px;
+    margin: 0 auto;
+  }
+
+  .form__wrapper {
+    width: 403px;
+    padding: 50px;
+    padding-top: 41px;
+  }
+
+  .contacts__wrapper {
+    margin: 0;
+    width: auto;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .contacts__map {
+    width: 324px;
+    height: 335px;
+    margin-right: 0;
+  }
+
+  .address {
+    width: 324px;
+    -webkit-box-ordinal-group: 3;
+    -ms-flex-order: 2;
+    order: 2;
+    margin-bottom: 0;
+  }
+
+  .address__notion {
+    margin-bottom: 20px;
+  }
+
+  .page-footer__wrapper {
+    width: auto;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 37px;
+    padding-bottom: 37px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .page-footer__logo-wrapper {
+    margin-right: -56px;
+  }
+
+  .page-footer__logo-icon {
+    width: 39px;
+  }
+
+  .social__item:not(:last-child) {
+    margin-right: 23px;
+  }
+
+  .navigation__wrapper {
+    width: 441px;
+  }
+
+  .navigation__list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .navigation__item:not(:last-child) {
+    margin-right: 23px;
+  }
+
+  .navigation__link {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+@media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (min-resolution: 1.5dppx) {
+  .page-header {
+    background-image: url("../img/background-tablet@2x.jpg");
+  }
+
+  .tour-catalog__astoria {
+    background-image: url("../img/tour-1-tablet@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .tour-catalog__elina {
+    background-image: url("../img/tour-1-tablet@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .tour-catalog__atlantis {
+    background-image: url("../img/tour-3-tablet@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .tour-catalog__odysseus {
+    background-image: url("../img/tour-4-tablet@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .tour-catalog__olympia {
+    background-image: url("../img/tour-5-tablet@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .tour-catalog__avrora {
+    background-image: url("../img/tour-6-tablet@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .tour-catalog__leonor {
+    background-image: url("../img/tour-7-tablet@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .tour-catalog__minion {
+    background-image: url("../img/tour-8-tablet@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .booking {
+    background-image: url("../img/booking-bg-tablet@2x.jpg");
+    background-color: #477ea2;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .modal__wrapper {
+    padding: 60px 16px;
+  }
+
+  .modal__content {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .modal--fit-content .modal__content {
+    width: 100%;
+  }
+
+  .page-header {
+    height: 503px;
     background-image: url("../img/background-mobile.jpg");
   }
 
   .page-header__wrapper {
     padding-bottom: 458px;
-    padding-top: 20px;
+    padding-top: 3px;
     margin: 0;
     width: auto;
     padding-left: 15px;
@@ -1343,7 +2193,8 @@ button,
   }
 
   .main-nav__menu--closed .main-nav__toggle {
-    width: 60px;
+    display: block;
+    width: 30px;
     height: 60px;
     padding: 0;
     border: none;
@@ -1355,7 +2206,7 @@ button,
   .main-nav__menu--closed .main-nav__toggle::before {
     position: absolute;
     content: "";
-    width: 16px;
+    width: 23px;
     height: 1.5px;
     top: 24px;
     left: 0;
@@ -1367,7 +2218,7 @@ button,
   .main-nav__menu--closed .main-nav__toggle::after {
     position: absolute;
     content: "";
-    width: 16px;
+    width: 23px;
     height: 1.5px;
     top: 29px;
     left: 0;
@@ -1379,6 +2230,7 @@ button,
   }
 
   .main-nav__menu--opened .main-nav__toggle {
+    display: block;
     top: 0;
     right: 0;
     position: relative;
@@ -1418,6 +2270,19 @@ button,
     box-shadow: none;
   }
 
+  .main-nav__menu-wrapper {
+    position: absolute;
+    background-color: #f9fbfd;
+    width: 100%;
+    margin-top: -1px;
+    right: 0;
+    z-index: 2;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 35px;
+    height: 100%;
+  }
+
   .main-nav__menu--opened .main-nav__menu-wrapper {
     display: block;
     width: 285px;
@@ -1435,6 +2300,10 @@ button,
     position: static;
     min-height: 0;
     margin-top: -62px;
+  }
+
+  .site-nav {
+    display: unset;
   }
 
   .site-nav__item:not(:last-child) {
@@ -1459,13 +2328,16 @@ button,
     margin: 0;
     padding-left: 15px;
     padding-right: 15px;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
   }
 
   .main-offer__title {
     font-size: 36px;
     line-height: 45px;
     width: 265px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
   }
 
   .main-offer__description {
@@ -1477,7 +2349,7 @@ button,
   .trip__wrapper {
     margin: 0;
     width: auto;
-    padding-top: 65px;
+    padding-top: 0;
     padding-bottom: 65px;
     padding-left: 15px;
     padding-right: 15px;
@@ -1487,6 +2359,9 @@ button,
     -moz-column-gap: 0;
     column-gap: 0;
     row-gap: 40px;
+    -webkit-transform: translateY(-98px);
+    -ms-transform: translateY(-98px);
+    transform: translateY(-98px);
   }
 
   .trip__title {
@@ -1504,8 +2379,11 @@ button,
     width: auto;
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 65px;
-    padding-bottom: 65px;
+    padding-top: 0;
+    padding-bottom: 5px;
+    -webkit-transform: translateY(-58px);
+    -ms-transform: translateY(-58px);
+    transform: translateY(-58px);
   }
 
   .adavantages__title {
@@ -1523,54 +2401,17 @@ button,
     row-gap: 30px;
   }
 
-  .adavantages__list-item {
-    padding-top: 76px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 25px;
-    background-repeat: no-repeat;
-  }
-
-  .adavantages__list-item:nth-child(1n)::before {
-    content: "";
-    position: absolute;
-    background-image: url("../img/Vector-1.svg");
-    left: 20px;
-    top: 25px;
-    width: 21px;
-    height: 26px;
-  }
-
-  .adavantages__list-item:nth-child(2n)::before {
-    content: "";
-    position: absolute;
-    background-image: url("../img/vector-2.svg");
-    left: 20px;
-    top: 29px;
-    width: 33px;
-    height: 19px;
-  }
-
-  .adavantages__list-item:nth-child(3n)::before {
-    content: "";
-    position: absolute;
-    background-image: url("../img/vector.svg");
-    left: 20px;
-    top: 32px;
-    width: 38px;
-    height: 13px;
-  }
-
   .adavantages__list-item-name {
     margin-bottom: 20px;
     font-size: 18px;
     line-height: 25px;
+    width: 170px;
   }
 
   .tour-catalog__wrapper {
     width: auto;
-    padding-top: 65px;
-    padding-bottom: 65px;
+    padding-top: 53px;
+    padding-bottom: 57px;
     padding-left: 25px;
     padding-right: 25px;
   }
@@ -1599,124 +2440,60 @@ button,
     width: auto;
   }
 
-  .tour-catalog__item:nth-child(1n) {
+  .tour-catalog__astoria {
     background-image: url("../img/tour-1-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
 
-  .tour-catalog__item:nth-child(1n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(1n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(2n) {
+  .tour-catalog__elina {
     background-image: url("../img/tour-1-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
 
-  .tour-catalog__item:nth-child(2n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(2n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(3n) {
+  .tour-catalog__atlantis {
     background-image: url("../img/tour-3-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
 
-  .tour-catalog__item:nth-child(3n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(3n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(4n) {
+  .tour-catalog__odysseus {
     background-image: url("../img/tour-4-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
 
-  .tour-catalog__item:nth-child(4n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(4n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(5n) {
+  .tour-catalog__olympia {
     background-image: url("../img/tour-5-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
 
-  .tour-catalog__item:nth-child(5n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(5n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(6n) {
+  .tour-catalog__avrora {
     background-image: url("../img/tour-6-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
 
-  .tour-catalog__item:nth-child(6n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(6n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(7n) {
+  .tour-catalog__leonor {
     background-image: url("../img/tour-7-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
   }
 
-  .tour-catalog__item:nth-child(7n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(7n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(8n) {
+  .tour-catalog__minion {
     background-image: url("../img/tour-8-mobile.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-  }
-
-  .tour-catalog__item:nth-child(8n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(8n):focus-visible {
-    background-image: none;
   }
 
   .booking {
@@ -1730,7 +2507,7 @@ button,
   .booking__wrapper {
     width: auto;
     padding-top: 65px;
-    padding-bottom: 65px;
+    padding-bottom: 52px;
     padding-left: 15px;
     padding-right: 15px;
     -webkit-box-orient: vertical;
@@ -1753,7 +2530,7 @@ button,
   }
 
   .booking__description-container {
-    margin-bottom: 40px;
+    margin-bottom: 13px;
   }
 
   .booking__offer-description {
@@ -1781,7 +2558,7 @@ button,
   .contacts__wrapper {
     width: auto;
     padding-top: 65px;
-    padding-bottom: 65px;
+    padding-bottom: 48px;
     padding-left: 15px;
     padding-right: 15px;
     -webkit-box-orient: vertical;
@@ -1794,6 +2571,7 @@ button,
     width: auto;
     height: 316px;
     margin-right: 0;
+    min-width: unset;
   }
 
   .address {
@@ -1802,10 +2580,11 @@ button,
     -ms-flex-order: -1;
     order: -1;
     margin-bottom: 43px;
+    min-width: unset;
   }
 
   .address__notion {
-    margin-bottom: 40px;
+    margin-bottom: 15px;
   }
 
   .page-footer__wrapper {
@@ -1823,12 +2602,18 @@ button,
     align-items: flex-start;
   }
 
+  .social {
+    margin-top: 26px;
+  }
+
   .social__item:not(:last-child) {
     margin-right: 23px;
   }
 
   .navigation__wrapper {
-    width: none;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 
   .navigation__list {
@@ -1840,7 +2625,7 @@ button,
 
   .navigation__item:not(:last-child) {
     margin-right: 0;
-    margin-bottom: 23px;
+    margin-bottom: 16px;
   }
 
   .navigation__link {
@@ -1849,129 +2634,65 @@ button,
   }
 }
 
-@media (min-width: 319px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 319px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 319px) and (min-resolution: 144dpi), (min-width: 319px) and (min-resolution: 1.5dppx) {
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (min-resolution: 1.5dppx) {
   .page-header {
     background-image: url("../img/background-mobile@2x.jpg");
   }
 
-  .tour-catalog__item:nth-child(1n) {
+  .tour-catalog__astoria {
     background-image: url("../img/tour-1-mobile@2x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
 
-  .tour-catalog__item:nth-child(1n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(1n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(2n) {
+  .tour-catalog__elina {
     background-image: url("../img/tour-1-mobile@2x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
 
-  .tour-catalog__item:nth-child(2n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(2n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(3n) {
+  .tour-catalog__atlantis {
     background-image: url("../img/tour-3-mobile@2x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
 
-  .tour-catalog__item:nth-child(3n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(3n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(4n) {
+  .tour-catalog__odysseus {
     background-image: url("../img/tour-4-mobile@2x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
 
-  .tour-catalog__item:nth-child(4n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(4n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(5n) {
+  .tour-catalog__olympia {
     background-image: url("../img/tour-5-mobile@2x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
 
-  .tour-catalog__item:nth-child(5n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(5n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(6n) {
+  .tour-catalog__avrora {
     background-image: url("../img/tour-6-mobile@2x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
 
-  .tour-catalog__item:nth-child(6n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(6n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(7n) {
+  .tour-catalog__leonor {
     background-image: url("../img/tour-7-mobile@2x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
 
-  .tour-catalog__item:nth-child(7n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(7n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(8n) {
+  .tour-catalog__minion {
     background-image: url("../img/tour-8-mobile@2x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-  }
-
-  .tour-catalog__item:nth-child(8n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(8n):focus-visible {
-    background-image: none;
   }
 
   .booking {
@@ -1983,1216 +2704,78 @@ button,
   }
 }
 
-@media (min-width: 767px) {
-  .container {
-    padding: 0 16px;
-  }
-
-  .modal__wrapper {
-    padding: 60px 16px;
-  }
-
-  .modal__content {
-    width: 100%;
-    padding: 20px;
-  }
-
-  .modal--fit-content .modal__content {
-    width: 100%;
-  }
-
-  .page-header {
-    background-image: url("../img/background-tablet.jpg");
-  }
-
-  .page-header__wrapper {
-    padding-bottom: 593px;
-    padding-top: 30px;
-    margin: 0;
-    width: auto;
-    padding-left: 45px;
-    padding-right: 45px;
-  }
-
-  .page-header__wrapper--opened {
-    padding-bottom: 593px;
-    padding-top: 30px;
-    margin: 0;
-    width: auto;
-    padding-left: 45px;
-    padding-right: 45px;
-    background-color: transparent;
-    position: relative;
-  }
-
-  .page-header__wrapper--opened .page-header__logo-icon {
-    fill: #f9fbfd;
-  }
-
-  .page-header__logo-icon {
-    fill: #f9fbfd;
-  }
-
-  .main-nav__toggle {
-    display: none;
-  }
-
-  .main-nav__menu--opened .main-nav__menu-wrapper {
-    display: block;
-    width: unset;
-  }
-
-  .main-nav__menu--closed .main-nav__menu-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-
-  .main-nav__menu--nojs .main-nav__menu-wrapper {
-    margin-top: 0;
-  }
-
-  .site-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-
-  .site-nav__item:not(:last-child) {
-    margin-right: 23px;
-  }
-
-  .site-nav__item-link {
-    font-size: 14px;
-    line-height: 17px;
-    color: #f9fbfd;
-  }
-
-  .main-offer {
-    -webkit-transform: translateY(-270px);
-    -ms-transform: translateY(-270px);
-    transform: translateY(-270px);
-  }
-
-  .main-offer__wrapper {
-    width: auto;
-    margin: 0;
-    padding-left: 45px;
-    padding-right: 45px;
-  }
-
-  .main-offer__title {
-    font-size: 50px;
-    line-height: 60px;
-    width: 589px;
-    margin-bottom: 14px;
-  }
-
-  .main-offer__description {
-    font-size: 18px;
-    line-height: 21px;
-    width: 387px;
-  }
-
-  .trip__wrapper {
-    margin: 0;
-    width: auto;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    padding-left: 45px;
-    padding-right: 45px;
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    -webkit-column-gap: 30px;
-    -moz-column-gap: 30px;
-    column-gap: 30px;
-  }
-
-  .trip__title {
-    font-size: 26px;
-    line-height: 36px;
-    width: 205px;
-    margin-bottom: 30px;
-  }
-
-  .trip__description {
-    width: 324px;
-  }
-
-  .adavantages__container {
-    width: auto;
-    padding-left: 45px;
-    padding-right: 45px;
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-
-  .adavantages__title {
-    font-size: 26px;
-    line-height: 39px;
-  }
-
-  .adavantages__list {
-    -ms-grid-columns: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    -webkit-column-gap: 30px;
-    -moz-column-gap: 30px;
-    column-gap: 30px;
-    row-gap: 30px;
-  }
-
-  .adavantages__list-item-name {
-    margin-bottom: 20px;
-    font-size: 18px;
-    line-height: 25px;
-  }
-
-  .tour-catalog__wrapper {
-    width: auto;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    padding-left: 60px;
-    padding-right: 60px;
-  }
-
-  .tour-catalog__title {
-    font-size: 26px;
-    line-height: 39px;
-    width: 281px;
-    margin-bottom: 60px;
-  }
-
-  .tour-catalog__list {
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    -webkit-column-gap: 30px;
-    -moz-column-gap: 30px;
-    column-gap: 30px;
-    row-gap: 30px;
-  }
-
-  .tour-catalog__item {
-    padding-left: 35px;
-    padding-right: 35px;
-    padding-top: 35px;
-    padding-bottom: 35px;
-    width: 309px;
-  }
-
-  .tour-catalog__item:nth-child(1n) {
-    background-image: url("../img/tour-1-tablet.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .tour-catalog__item:nth-child(1n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(1n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(2n) {
-    background-image: url("../img/tour-1-tablet.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .tour-catalog__item:nth-child(2n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(2n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(3n) {
-    background-image: url("../img/tour-3-tablet.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .tour-catalog__item:nth-child(3n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(3n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(4n) {
-    background-image: url("../img/tour-4-tablet.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .tour-catalog__item:nth-child(4n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(4n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(5n) {
-    background-image: url("../img/tour-5-tablet.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .tour-catalog__item:nth-child(5n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(5n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(6n) {
-    background-image: url("../img/tour-6-tablet.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .tour-catalog__item:nth-child(6n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(6n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(7n) {
-    background-image: url("../img/tour-7-tablet.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .tour-catalog__item:nth-child(7n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(7n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(8n) {
-    background-image: url("../img/tour-8-tablet.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .tour-catalog__item:nth-child(8n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(8n):focus-visible {
-    background-image: none;
-  }
-
-  .booking {
-    background-image: url("../img/booking-bg-tablet.jpg");
-    background-color: #477ea2;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
-  .booking__wrapper {
-    width: auto;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    padding-left: 175px;
-    padding-right: 175px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  .booking__title {
-    font-size: 34px;
-    line-height: 51px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 25px;
-    width: 419px;
-    text-align: center;
-  }
-
-  .booking__description-container {
-    margin-bottom: 60px;
-  }
-
-  .booking__offer-description {
-    font-size: 18px;
-    line-height: 27px;
-    width: 352px;
-    margin: 0 auto;
-  }
-
-  .form__wrapper {
-    width: 403px;
-    padding: 50px;
-  }
-
-  .contacts__wrapper {
-    margin: 0;
-    width: auto;
-    padding-left: 45px;
-    padding-right: 45px;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  .contacts__map {
-    width: 324px;
-    height: 335px;
-    margin-right: 0;
-  }
-
-  .address {
-    width: 324px;
-    -webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
-    order: 2;
-    margin-bottom: 0;
-  }
-
-  .address__notion {
-    margin-bottom: 40px;
-  }
-
-  .page-footer__wrapper {
-    width: auto;
-    padding-left: 45px;
-    padding-right: 45px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-
-  .social__item:not(:last-child) {
-    margin-right: 23px;
-  }
-
-  .navigation__wrapper {
-    width: 441px;
-  }
-
-  .navigation__list {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-  }
-
-  .navigation__item:not(:last-child) {
-    margin-right: 23px;
-  }
-
-  .navigation__link {
-    font-size: 12px;
-    line-height: 14px;
-  }
-}
-
-@media (min-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 767px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 767px) and (min-resolution: 144dpi), (min-width: 767px) and (min-resolution: 1.5dppx) {
-  .page-header {
-    background-image: url("../img/background-tablet@2x.jpg");
-  }
-
-  .tour-catalog__item:nth-child(1n) {
-    background-image: url("../img/tour-1-tablet@2x.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
-  .tour-catalog__item:nth-child(1n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(1n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(2n) {
-    background-image: url("../img/tour-1-tablet@2x.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
-  .tour-catalog__item:nth-child(2n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(2n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(3n) {
-    background-image: url("../img/tour-3-tablet@2x.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
-  .tour-catalog__item:nth-child(3n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(3n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(4n) {
-    background-image: url("../img/tour-4-tablet@2x.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
-  .tour-catalog__item:nth-child(4n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(4n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(5n) {
-    background-image: url("../img/tour-5-tablet@2x.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
-  .tour-catalog__item:nth-child(5n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(5n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(6n) {
-    background-image: url("../img/tour-6-tablet@2x.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
-  .tour-catalog__item:nth-child(6n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(6n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(7n) {
-    background-image: url("../img/tour-7-tablet@2x.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
-  .tour-catalog__item:nth-child(7n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(7n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(8n) {
-    background-image: url("../img/tour-8-tablet@2x.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
-  .tour-catalog__item:nth-child(8n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(8n):focus-visible {
-    background-image: none;
-  }
-
-  .booking {
-    background-image: url("../img/booking-bg-tablet@2x.jpg");
-    background-color: #477ea2;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-}
-
-@media (min-width: 1023px) {
-  .container {
-    padding: 0 24px;
-  }
-
-  .page-header {
-    background-image: url("../img/background-desktop.jpg");
-  }
-
-  .page-header__wrapper {
-    margin: 0 auto;
-    max-width: 1160px;
-    padding: 0;
-    padding-top: 35px;
-    padding-bottom: 577px;
-  }
-
-  .page-header__wrapper--opened {
-    margin: 0 auto;
-    max-width: 1160px;
-    padding: 0;
-    padding-top: 35px;
-    padding-bottom: 577px;
-    background-color: transparent;
-    position: relative;
-  }
-
-  .page-header__wrapper--opened .page-header__logo-icon {
-    fill: #f9fbfd;
-  }
-
-  .page-header__logo-icon {
-    fill: #f9fbfd;
-  }
-
-  .main-nav__toggle {
-    display: none;
-  }
-
-  .site-nav__item:not(:last-child) {
-    margin-right: 33px;
-  }
-
-  .site-nav__item-link {
-    font-size: 16px;
-    line-height: 20px;
-    color: #f9fbfd;
-  }
-
-  .main-offer {
-    -webkit-transform: translateY(-170px);
-    -ms-transform: translateY(-170px);
-    transform: translateY(-170px);
-  }
-
-  .main-offer__wrapper {
-    max-width: 1160px;
-    margin: 0 auto;
-    padding-left: 96px;
-    padding-right: 198px;
-    -webkit-transform: translateY(-99px);
-    -ms-transform: translateY(-99px);
-    transform: translateY(-99px);
-  }
-
-  .main-offer__title {
-    font-size: 54px;
-    line-height: 65px;
-    width: 636px;
-    margin-bottom: 16px;
-  }
-
-  .main-offer__description {
-    font-size: 20px;
-    line-height: 24px;
-    width: 430px;
-  }
-
-  .trip__wrapper {
-    margin: 0 auto;
-    max-width: 1160px;
-    padding-top: 120px;
-    padding-bottom: 120px;
-    padding-left: 0;
-    padding-right: 0;
-    -ms-grid-columns: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-    -webkit-column-gap: 88px;
-    -moz-column-gap: 88px;
-    column-gap: 88px;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  .trip__title {
-    font-size: 28px;
-    line-height: 42px;
-    width: 430px;
-    margin-bottom: 40px;
-  }
-
-  .trip__description {
-    width: 512px;
-  }
-
-  .adavantages__container {
-    max-width: 1160px;
-    margin: 0 auto;
-    padding-top: 120px;
-    padding-bottom: 120px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .adavantages__title {
-    margin-bottom: 60px;
-    font-size: 28px;
-    line-height: 42px;
-  }
-
-  .adavantages__list {
-    -ms-grid-columns: 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    -webkit-column-gap: 40px;
-    -moz-column-gap: 40px;
-    column-gap: 40px;
-    row-gap: 40px;
-  }
-
-  .adavantages__list-item {
-    padding-top: 87px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 50px;
-    background-repeat: no-repeat;
-  }
-
-  .adavantages__list-item:nth-child(1n)::before {
-    content: "";
-    position: absolute;
-    background-image: url("../img/vector-1.svg");
-    left: 30px;
-    top: 30px;
-    width: 27px;
-    height: 32px;
-  }
-
-  .adavantages__list-item:nth-child(2n)::before {
-    content: "";
-    position: absolute;
-    background-image: url("../img/vector-2.svg");
-    left: 30px;
-    top: 30px;
-    width: 38px;
-    height: 21px;
-  }
-
-  .adavantages__list-item:nth-child(3n)::before {
-    content: "";
-    position: absolute;
-    background-image: url("../img/vector.svg");
-    left: 30px;
-    top: 30px;
-    width: 42px;
-    height: 15px;
-  }
-
-  .adavantages__list-item-name {
-    margin-bottom: 20px;
-    font-size: 18px;
-    line-height: 27px;
-    max-width: 296px;
-  }
-
-  .adavantages__list-item-description {
-    max-width: 288px;
-  }
-
-  .tour-catalog__wrapper {
-    max-width: 1160px;
-    margin: 0 auto;
-    padding-top: 70px;
-    padding-bottom: 120px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .tour-catalog__title {
-    font-size: 28px;
-    line-height: 42px;
-    width: 302px;
-    margin-bottom: 60px;
-  }
-
-  .tour-catalog__list {
-    -ms-grid-columns: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    -webkit-column-gap: 30px;
-    -moz-column-gap: 30px;
-    column-gap: 30px;
-    row-gap: 30px;
-  }
-
-  .tour-catalog__item {
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 35px;
-    padding-bottom: 35px;
-    max-width: 260px;
-    width: unset;
-  }
-
-  .tour-catalog__item:nth-child(1n) {
-    background-image: url("../img/tour-1-desktop.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .tour-catalog__item:nth-child(1n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(1n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(2n) {
-    background-image: url("../img/tour-1-desktop.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .tour-catalog__item:nth-child(2n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(2n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(3n) {
-    background-image: url("../img/tour-3-desktop.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .tour-catalog__item:nth-child(3n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(3n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(4n) {
-    background-image: url("../img/tour-4-desktop.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .tour-catalog__item:nth-child(4n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(4n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(5n) {
-    background-image: url("../img/tour-5-desktop.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .tour-catalog__item:nth-child(5n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(5n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(6n) {
-    background-image: url("../img/tour-6-desktop.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .tour-catalog__item:nth-child(6n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(6n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(7n) {
-    background-image: url("../img/tour-7-desktop.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .tour-catalog__item:nth-child(7n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(7n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(8n) {
-    background-image: url("../img/tour-8-desktop.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  .tour-catalog__item:nth-child(8n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(8n):focus-visible {
-    background-image: none;
-  }
-
-  .booking {
-    background-image: url("../img/booking-bg-desktop.jpg");
-    background-color: #477ea2;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-
-  .booking__wrapper {
-    max-width: 1160px;
-    margin: 0 auto;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-left: 60px;
-    padding-right: 60px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
-
-  .booking__title {
-    font-size: 40px;
-    line-height: 60px;
-    margin: 0;
-    margin-bottom: 30px;
-    width: 493px;
-  }
-
-  .booking__offer-description {
-    font-size: 18px;
-    line-height: 27px;
-    width: 352px;
-    margin: 0;
-    text-align: left;
-  }
-
-  .form__wrapper {
-    width: 403px;
-    padding: 50px;
-  }
-
-  .form__description {
-    font-size: 18px;
-    line-height: 27px;
-    margin: 0;
-    margin-bottom: 35px;
-  }
-
-  .contacts__wrapper {
-    margin: 0 auto;
-    max-width: 1160px;
-    padding-top: 120px;
-    padding-bottom: 120px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  .contacts__map {
-    width: 560px;
-    min-width: 324px;
-    height: 306px;
-    margin-right: 100px;
-  }
-
-  .address {
-    width: 560px;
-    min-width: 324px;
-    -webkit-box-ordinal-group: 3;
-    -ms-flex-order: 2;
-    order: 2;
-    margin-bottom: 0;
-  }
-
-  .address__notion {
-    margin-bottom: 45px;
-  }
-
-  .page-footer__wrapper {
-    margin: 0 auto;
-    max-width: 1160px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-
-  .social__item:not(:last-child) {
-    margin-right: 28px;
-  }
-
-  .navigation__wrapper {
-    width: 594px;
-  }
-
-  .navigation__list {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-  }
-
-  .navigation__item:not(:last-child) {
-    margin-right: 33px;
-  }
-
-  .navigation__link {
-    font-size: 16px;
-    line-height: 19px;
-  }
-}
-
-@media (min-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1023px) and (-o-min-device-pixel-ratio: 3/2), (min-width: 1023px) and (min-resolution: 144dpi), (min-width: 1023px) and (min-resolution: 1.5dppx) {
+@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
   .page-header {
     background-image: url("../img/background-desktop@2x.jpg");
   }
 
-  .tour-catalog__item:nth-child(1n) {
+  .adavantages {
+    background-image: url("../img/advantages-bg-desktop@2x.png");
+    background-color: #bfd7ef;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .tour-catalog__astoria {
     background-image: url("../img/tour-1-desktop@2x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
 
-  .tour-catalog__item:nth-child(1n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(1n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(2n) {
+  .tour-catalog__elina {
     background-image: url("../img/tour-1-desktop@2x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
 
-  .tour-catalog__item:nth-child(2n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(2n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(3n) {
+  .tour-catalog__atlantis {
     background-image: url("../img/tour-3-desktop@2x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
 
-  .tour-catalog__item:nth-child(3n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(3n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(4n) {
+  .tour-catalog__odysseus {
     background-image: url("../img/tour-4-desktop@2x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
 
-  .tour-catalog__item:nth-child(4n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(4n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(5n) {
+  .tour-catalog__olympia {
     background-image: url("../img/tour-5-desktop@2x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
 
-  .tour-catalog__item:nth-child(5n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(5n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(6n) {
+  .tour-catalog__avrora {
     background-image: url("../img/tour-6-desktop@2x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
 
-  .tour-catalog__item:nth-child(6n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(6n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(7n) {
+  .tour-catalog__leonor {
     background-image: url("../img/tour-7-desktop@2x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
 
-  .tour-catalog__item:nth-child(7n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(7n):focus-visible {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(8n) {
+  .tour-catalog__minion {
     background-image: url("../img/tour-8-desktop@2x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
 
-  .tour-catalog__item:nth-child(8n):hover {
-    background-image: none;
-  }
-
-  .tour-catalog__item:nth-child(8n):focus-visible {
-    background-image: none;
-  }
-
   .booking {
     background-image: url("../img/booking-bg-desktop@2x.png");
     background-color: #477ea2;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
-}
-
-@media (max-width: 1439px) {
-  .container {
-    padding: 0 32px;
-  }
-}
-
-@media (max-width: 767px) {
-  .main-nav__menu-wrapper {
-    position: absolute;
-    background-color: #f9fbfd;
-    width: 100%;
-    margin-top: -1px;
-    right: 0;
-    z-index: 2;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 35px;
-    height: 100%;
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
-  .adavantages {
-    background-image: url("../img/advantages-bg-desktop@2x.png");
-    background-color: #bfd7ef;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

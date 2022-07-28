@@ -15,29 +15,28 @@
 }
 
 .adavantages__container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  padding-left: 10px;
+  padding-right: 10px;
+
   @include vp-1023 {
-    max-width: 1160px;
-    margin: 0 auto;
-    padding-top: 120px;
-    padding-bottom: 120px;
-    padding-left: 0;
-    padding-right: 0;
+    width: auto;
+    padding-left: 45px;
+    padding-right: 45px;
+    padding-top: 60px;
+    padding-bottom: 100px;
   }
 
   @include vp-767 {
     width: auto;
-    padding-left: 45px;
-    padding-right: 45px;
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-
-  @include vp-319 {
-    width: auto;
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 65px;
-    padding-bottom: 65px;
+    padding-top: 0;
+    padding-bottom: 5px;
+    transform: translateY(-58px);
   }
 }
 
@@ -45,20 +44,16 @@
   margin: 0;
   font-weight: 600;
   text-align: center;
+  margin-bottom: 60px;
+  font-size: 28px;
+  line-height: 42px;
 
   @include vp-1023 {
-    margin-bottom: 60px;
-    font-size: 28px;
-    line-height: 42px;
-  }
-
-
-  @include vp-767 {
     font-size: 26px;
     line-height: 39px;
   }
 
-  @include vp-319 {
+  @include vp-767 {
     margin-bottom: 40px;
     font-size: 24px;
     line-height: 36px;
@@ -70,20 +65,17 @@
   padding: 0;
   list-style-type: none;
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 40px;
+  row-gap: 40px;
 
   @include vp-1023 {
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 40px;
-    row-gap: 40px;
-  }
-
-  @include vp-767 {
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 30px;
     row-gap: 30px;
   }
 
-  @include vp-319 {
+  @include vp-767 {
     grid-template-columns: 1fr;
     column-gap: 40px;
     row-gap: 30px;
@@ -93,57 +85,51 @@
 .adavantages__list-item {
   position: relative;
   background-color: rgba(249, 251, 253, 1);
+  padding-top: 67px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 22px;
+  background-repeat: no-repeat;
 
-  @include vp-1023 {
-    padding-top: 87px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 50px;
-    background-repeat: no-repeat;
-
-    &:nth-child(1n)::before {
-      content: "";
-      position: absolute;
-      background-image: url("../img/vector-1.svg");
-      left: 30px;
-      top: 30px;
-      width: 27px;
-      height: 32px;
-    }
-
-    &:nth-child(2n)::before {
-      content: "";
-      position: absolute;
-      background-image: url("../img/vector-2.svg");
-      left: 30px;
-      top: 30px;
-      width: 38px;
-      height: 21px;
-    }
-
-    &:nth-child(3n)::before {
-      content: "";
-      position: absolute;
-      background-image: url("../img/vector.svg");
-      left: 30px;
-      top: 30px;
-      width: 42px;
-      height: 15px;
-    }
+  &:nth-child(1n)::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/boat.svg");
+    left: 30px;
+    top: 22px;
+    width: 27px;
+    height: 32px;
   }
 
-  @include vp-319 {
-    padding-top: 76px;
-    padding-left: 20px;
-    padding-right: 20px;
+  &:nth-child(2n)::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/checked.svg");
+    left: 30px;
+    top: 30px;
+    width: 38px;
+    height: 21px;
+  }
+
+  &:nth-child(3n)::before {
+    content: "";
+    position: absolute;
+    background-image: url("../img/speedboat.svg");
+    left: 30px;
+    top: 30px;
+    width: 42px;
+    height: 15px;
+  }
+
+  @include vp-1023 {
+    padding-top: 59px;
+    padding-left: 17px;
+    padding-right: 17px;
     padding-bottom: 25px;
     background-repeat: no-repeat;
 
 
     &:nth-child(1n)::before {
-      content: "";
-      position: absolute;
-      background-image: url("../img/Vector-1.svg");
       left: 20px;
       top: 25px;
       width: 21px;
@@ -151,9 +137,6 @@
     }
 
     &:nth-child(2n)::before {
-      content: "";
-      position: absolute;
-      background-image: url("../img/vector-2.svg");
       left: 20px;
       top: 29px;
       width: 33px;
@@ -161,9 +144,6 @@
     }
 
     &:nth-child(3n)::before {
-      content: "";
-      position: absolute;
-      background-image: url("../img/vector.svg");
       left: 20px;
       top: 32px;
       width: 38px;
@@ -176,27 +156,24 @@
   margin: 0;
   font-weight: 500;
   word-wrap: break-word;
-  width: auto;
+  width: max-content;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 27px;
+  max-width: 296px;
 
   @include vp-1023 {
     margin-bottom: 20px;
     font-size: 18px;
-    line-height: 27px;
-    max-width: 296px;
+    line-height: 25px;
+    width: auto;
   }
 
   @include vp-767 {
     margin-bottom: 20px;
     font-size: 18px;
     line-height: 25px;
-    // width: 170px;
-  }
-
-  @include vp-319 {
-    margin-bottom: 20px;
-    font-size: 18px;
-    line-height: 25px;
-    // width: 170px;
+    width: 170px;
   }
 }
 
@@ -206,8 +183,9 @@
   font-size: 14px;
   line-height: 19px;
   width: auto;
+  max-width: 288px;
 
   @include vp-1023 {
-    max-width: 288px;
+    width: auto;
   }
 }

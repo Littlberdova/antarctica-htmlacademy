@@ -1,16 +1,13 @@
 .main-offer {
   background-color: transparent;
   z-index: 2;
+  transform: translateY(-170px);
 
   @include vp-1023 {
-    transform: translateY(-170px);
-  }
-
-  @include vp-767 {
     transform: translateY(-270px);
   }
 
-  @include vp-319 {
+  @include vp-767 {
     transform: translateY(-345px);
   }
 }
@@ -18,27 +15,26 @@
 
 .main-offer__wrapper {
   box-sizing: border-box;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-left: 96px;
+  padding-right: 198px;
+  transform: translateY(-214px);
 
   @include vp-1023 {
-    max-width: 1160px;
-    margin: 0 auto;
-    padding-left: 96px;
-    padding-right: 198px;
-    transform: translateY(-99px);
+    width: auto;
+    margin: 0;
+    padding-left: 45px;
+    padding-right: 45px;
+    transform: translateY(-118px);
   }
 
   @include vp-767 {
     width: auto;
     margin: 0;
-    padding-left: 45px;
-    padding-right: 45px;
-  }
-
-  @include vp-319 {
-    width: auto;
-    margin: 0;
     padding-left: 15px;
     padding-right: 15px;
+    transform: translateY(20px);
   }
 }
 
@@ -48,26 +44,23 @@
   word-break: break-word;
   margin: 0;
   padding: 0;
+  font-size: 54px;
+  line-height: 65px;
+  width: 636px;
+  margin-bottom: 16px;
 
   @include vp-1023 {
-    font-size: 54px;
-    line-height: 65px;
-    width: 636px;
-    margin-bottom: 16px;
-  }
-
-  @include vp-767 {
     font-size: 50px;
     line-height: 60px;
     width: 589px;
     margin-bottom: 14px;
   }
 
-  @include vp-319 {
+  @include vp-767 {
     font-size: 36px;
     line-height: 45px;
     width: 265px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
   }
 }
 
@@ -77,21 +70,17 @@
   word-break: break-word;
   margin: 0;
   padding: 0;
+  font-size: 20px;
+  line-height: 24px;
+  width: 430px;
 
   @include vp-1023 {
-    font-size: 20px;
-    line-height: 24px;
-    width: 430px;
-  }
-
-
-  @include vp-767 {
     font-size: 18px;
     line-height: 21px;
     width: 387px;
   }
 
-  @include vp-319 {
+  @include vp-767 {
     font-size: 16px;
     line-height: 22px;
     width: 199px;

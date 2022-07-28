@@ -1,25 +1,23 @@
 .tour-catalog__wrapper {
-  @include vp-1023 {
-    max-width: 1160px;
-    margin: 0 auto;
-    padding-top: 70px;
-    padding-bottom: 120px;
-    padding-left: 0;
-    padding-right: 0;
-  }
+  max-width: 1160px;
+  margin: 0 auto;
+  padding-top: 110px;
+  padding-bottom: 120px;
+  padding-left: 10px;
+  padding-right: 10px;
 
-  @include vp-767 {
+  @include vp-1023 {
     width: auto;
-    padding-top: 100px;
+    padding-top: 80px;
     padding-bottom: 100px;
     padding-left: 60px;
     padding-right: 60px;
   }
 
-  @include vp-319 {
+  @include vp-767 {
     width: auto;
-    padding-top: 65px;
-    padding-bottom: 65px;
+    padding-top: 53px;
+    padding-bottom: 57px;
     padding-left: 25px;
     padding-right: 25px;
   }
@@ -29,22 +27,19 @@
   margin: 0 auto;
   font-weight: 600;
   word-wrap: break-word;
+  font-size: 28px;
+  line-height: 42px;
+  width: 302px;
+  margin-bottom: 49px;
 
   @include vp-1023 {
-    font-size: 28px;
-    line-height: 42px;
-    width: 302px;
-    margin-bottom: 60px;
-  }
-
-  @include vp-767 {
     font-size: 26px;
     line-height: 39px;
     width: 281px;
-    margin-bottom: 60px;
+    margin-bottom: 52px;
   }
 
-  @include vp-319 {
+  @include vp-767 {
     font-size: 24px;
     line-height: 36px;
     width: 259px;
@@ -57,20 +52,17 @@
   padding: 0;
   list-style-type: none;
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 30px;
 
   @include vp-1023 {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 30px;
-    row-gap: 30px;
-  }
-
-  @include vp-767 {
     grid-template-columns: 1fr 1fr;
     column-gap: 30px;
     row-gap: 30px;
   }
 
-  @include vp-319 {
+  @include vp-767 {
     grid-template-columns: 1fr;
     column-gap: 30px;
     row-gap: 30px;
@@ -82,10 +74,22 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  height: 478px;
-  width: 260px;
+  height: 386px;
   box-sizing: border-box;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+  max-width: 260px;
+  width: unset;
 
+  &:hover {
+    background-image: none;
+  }
+
+  &:focus-visible {
+    background-image: none;
+  }
 
   &:hover .tour-catalog__item-options {
     display: flex;
@@ -114,749 +118,363 @@
   }
 
   @include vp-1023 {
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-top: 35px;
-    padding-bottom: 35px;
-    max-width: 260px;
-    width: unset;
-
-    &:nth-child(1n) {
-      background-image: url("../img/tour-1-desktop.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-
-      &:hover {
-        background-image: none;
-      }
-
-      &:focus-visible {
-        background-image: none;
-      }
-
-      @include retina {
-        background-image: url("../img/tour-1-desktop@2x.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        &:hover {
-          background-image: none;
-        }
-
-        &:focus-visible {
-          background-image: none;
-        }
-      }
-    }
-
-    &:nth-child(2n) {
-      background-image: url("../img/tour-1-desktop.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-
-      &:hover {
-        background-image: none;
-      }
-
-      &:focus-visible {
-        background-image: none;
-      }
-
-      @include retina {
-        background-image: url("../img/tour-1-desktop@2x.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        &:hover {
-          background-image: none;
-        }
-
-        &:focus-visible {
-          background-image: none;
-        }
-      }
-    }
-
-    &:nth-child(3n) {
-      background-image: url("../img/tour-3-desktop.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-
-      &:hover {
-        background-image: none;
-      }
-
-      &:focus-visible {
-        background-image: none;
-      }
-
-      @include retina {
-        background-image: url("../img/tour-3-desktop@2x.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        &:hover {
-          background-image: none;
-        }
-
-        &:focus-visible {
-          background-image: none;
-        }
-      }
-    }
-
-    &:nth-child(4n) {
-      background-image: url("../img/tour-4-desktop.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-
-      &:hover {
-        background-image: none;
-      }
-
-      &:focus-visible {
-        background-image: none;
-      }
-
-      @include retina {
-        background-image: url("../img/tour-4-desktop@2x.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        &:hover {
-          background-image: none;
-        }
-
-        &:focus-visible {
-          background-image: none;
-        }
-      }
-    }
-
-    &:nth-child(5n) {
-      background-image: url("../img/tour-5-desktop.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-
-      &:hover {
-        background-image: none;
-      }
-
-      &:focus-visible {
-        background-image: none;
-      }
-
-      @include retina {
-        background-image: url("../img/tour-5-desktop@2x.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        &:hover {
-          background-image: none;
-        }
-
-        &:focus-visible {
-          background-image: none;
-        }
-      }
-    }
-
-    &:nth-child(6n) {
-      background-image: url("../img/tour-6-desktop.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-
-      &:hover {
-        background-image: none;
-      }
-
-      &:focus-visible {
-        background-image: none;
-      }
-
-      @include retina {
-        background-image: url("../img/tour-6-desktop@2x.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        &:hover {
-          background-image: none;
-        }
-
-        &:focus-visible {
-          background-image: none;
-        }
-      }
-    }
-
-    &:nth-child(7n) {
-      background-image: url("../img/tour-7-desktop.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-
-      &:hover {
-        background-image: none;
-      }
-
-      &:focus-visible {
-        background-image: none;
-      }
-
-      @include retina {
-        background-image: url("../img/tour-7-desktop@2x.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        &:hover {
-          background-image: none;
-        }
-
-        &:focus-visible {
-          background-image: none;
-        }
-      }
-    }
-
-    &:nth-child(8n) {
-      background-image: url("../img/tour-8-desktop.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-
-      &:hover {
-        background-image: none;
-      }
-
-      &:focus-visible {
-        background-image: none;
-      }
-
-      @include retina {
-        background-image: url("../img/tour-8-desktop@2x.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        &:hover {
-          background-image: none;
-        }
-
-        &:focus-visible {
-          background-image: none;
-        }
-      }
-    }
-  }
-
-  @include vp-767 {
     padding-left: 35px;
     padding-right: 35px;
     padding-top: 35px;
     padding-bottom: 35px;
     width: 309px;
-
-
-    &:nth-child(1n) {
-      background-image: url("../img/tour-1-tablet.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-
-      &:hover {
-        background-image: none;
-      }
-
-      &:focus-visible {
-        background-image: none;
-      }
-
-      @include retina {
-        background-image: url("../img/tour-1-tablet@2x.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        &:hover {
-          background-image: none;
-        }
-
-        &:focus-visible {
-          background-image: none;
-        }
-      }
-    }
-
-    &:nth-child(2n) {
-      background-image: url("../img/tour-1-tablet.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-
-      &:hover {
-        background-image: none;
-      }
-
-      &:focus-visible {
-        background-image: none;
-      }
-
-      @include retina {
-        background-image: url("../img/tour-1-tablet@2x.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        &:hover {
-          background-image: none;
-        }
-
-        &:focus-visible {
-          background-image: none;
-        }
-      }
-    }
-
-    &:nth-child(3n) {
-      background-image: url("../img/tour-3-tablet.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-
-      &:hover {
-        background-image: none;
-      }
-
-      &:focus-visible {
-        background-image: none;
-      }
-
-      @include retina {
-        background-image: url("../img/tour-3-tablet@2x.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        &:hover {
-          background-image: none;
-        }
-
-        &:focus-visible {
-          background-image: none;
-        }
-      }
-    }
-
-    &:nth-child(4n) {
-      background-image: url("../img/tour-4-tablet.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-
-      &:hover {
-        background-image: none;
-      }
-
-      &:focus-visible {
-        background-image: none;
-      }
-
-      @include retina {
-        background-image: url("../img/tour-4-tablet@2x.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        &:hover {
-          background-image: none;
-        }
-
-        &:focus-visible {
-          background-image: none;
-        }
-      }
-    }
-
-    &:nth-child(5n) {
-      background-image: url("../img/tour-5-tablet.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-
-      &:hover {
-        background-image: none;
-      }
-
-      &:focus-visible {
-        background-image: none;
-      }
-
-      @include retina {
-        background-image: url("../img/tour-5-tablet@2x.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        &:hover {
-          background-image: none;
-        }
-
-        &:focus-visible {
-          background-image: none;
-        }
-      }
-    }
-
-    &:nth-child(6n) {
-      background-image: url("../img/tour-6-tablet.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-
-      &:hover {
-        background-image: none;
-      }
-
-      &:focus-visible {
-        background-image: none;
-      }
-
-      @include retina {
-        background-image: url("../img/tour-6-tablet@2x.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        &:hover {
-          background-image: none;
-        }
-
-        &:focus-visible {
-          background-image: none;
-        }
-      }
-    }
-
-    &:nth-child(7n) {
-      background-image: url("../img/tour-7-tablet.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-
-      &:hover {
-        background-image: none;
-      }
-
-      &:focus-visible {
-        background-image: none;
-      }
-
-      @include retina {
-        background-image: url("../img/tour-7-tablet@2x.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        &:hover {
-          background-image: none;
-        }
-
-        &:focus-visible {
-          background-image: none;
-        }
-      }
-    }
-
-    &:nth-child(8n) {
-      background-image: url("../img/tour-8-tablet.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-
-      &:hover {
-        background-image: none;
-      }
-
-      &:focus-visible {
-        background-image: none;
-      }
-
-      @include retina {
-        background-image: url("../img/tour-8-tablet@2x.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        &:hover {
-          background-image: none;
-        }
-
-        &:focus-visible {
-          background-image: none;
-        }
-      }
-    }
+    max-width: 309px;
   }
 
-  @include vp-319 {
+  @include vp-767 {
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 35px;
     padding-bottom: 35px;
     width: auto;
+  }
+}
 
+.tour-catalog__astoria {
+  background-image: url("../img/tour-1-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
-    &:nth-child(1n) {
-      background-image: url("../img/tour-1-mobile.jpg");
+  &:hover {
+    background-image: none;
+  }
+
+  &:focus-visible {
+    background-image: none;
+  }
+
+  @include retina {
+    background-image: url("../img/tour-1-desktop@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @include vp-1023 {
+    background-image: url("../img/tour-1-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include retina {
+      background-image: url("../img/tour-1-tablet@2x.jpg");
       background-repeat: no-repeat;
-      background-size: cover;
       background-position: center;
-
-      &:hover {
-        background-image: none;
-      }
-
-      &:focus-visible {
-        background-image: none;
-      }
-
-      @include retina {
-        background-image: url("../img/tour-1-mobile@2x.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        &:hover {
-          background-image: none;
-        }
-
-        &:focus-visible {
-          background-image: none;
-        }
-      }
+      background-size: cover;
     }
+  }
 
-    &:nth-child(2n) {
-      background-image: url("../img/tour-1-mobile.jpg");
+  @include vp-767 {
+    background-image: url("../img/tour-1-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include retina {
+      background-image: url("../img/tour-1-mobile@2x.jpg");
       background-repeat: no-repeat;
-      background-size: cover;
       background-position: center;
-
-      &:hover {
-        background-image: none;
-      }
-
-      &:focus-visible {
-        background-image: none;
-      }
-
-      @include retina {
-        background-image: url("../img/tour-1-mobile@2x.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        &:hover {
-          background-image: none;
-        }
-
-        &:focus-visible {
-          background-image: none;
-        }
-      }
+      background-size: cover;
     }
+  }
+}
 
-    &:nth-child(3n) {
-      background-image: url("../img/tour-3-mobile.jpg");
+.tour-catalog__elina {
+  background-image: url("../img/tour-1-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include retina {
+    background-image: url("../img/tour-1-desktop@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @include vp-1023 {
+    background-image: url("../img/tour-1-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include retina {
+      background-image: url("../img/tour-1-tablet@2x.jpg");
       background-repeat: no-repeat;
-      background-size: cover;
       background-position: center;
-
-      &:hover {
-        background-image: none;
-      }
-
-      &:focus-visible {
-        background-image: none;
-      }
-
-      @include retina {
-        background-image: url("../img/tour-3-mobile@2x.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        &:hover {
-          background-image: none;
-        }
-
-        &:focus-visible {
-          background-image: none;
-        }
-      }
+      background-size: cover;
     }
+  }
 
-    &:nth-child(4n) {
-      background-image: url("../img/tour-4-mobile.jpg");
+  @include vp-767 {
+    background-image: url("../img/tour-1-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include retina {
+      background-image: url("../img/tour-1-mobile@2x.jpg");
       background-repeat: no-repeat;
-      background-size: cover;
       background-position: center;
-
-      &:hover {
-        background-image: none;
-      }
-
-      &:focus-visible {
-        background-image: none;
-      }
-
-      @include retina {
-        background-image: url("../img/tour-4-mobile@2x.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        &:hover {
-          background-image: none;
-        }
-
-        &:focus-visible {
-          background-image: none;
-        }
-      }
+      background-size: cover;
     }
+  }
+}
 
-    &:nth-child(5n) {
-      background-image: url("../img/tour-5-mobile.jpg");
+.tour-catalog__atlantis {
+  background-image: url("../img/tour-3-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include retina {
+    background-image: url("../img/tour-3-desktop@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @include vp-1023 {
+    background-image: url("../img/tour-3-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include retina {
+      background-image: url("../img/tour-3-tablet@2x.jpg");
       background-repeat: no-repeat;
-      background-size: cover;
       background-position: center;
-
-      &:hover {
-        background-image: none;
-      }
-
-      &:focus-visible {
-        background-image: none;
-      }
-
-      @include retina {
-        background-image: url("../img/tour-5-mobile@2x.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        &:hover {
-          background-image: none;
-        }
-
-        &:focus-visible {
-          background-image: none;
-        }
-      }
+      background-size: cover;
     }
+  }
 
-    &:nth-child(6n) {
-      background-image: url("../img/tour-6-mobile.jpg");
+  @include vp-767 {
+    background-image: url("../img/tour-3-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include retina {
+      background-image: url("../img/tour-3-mobile@2x.jpg");
       background-repeat: no-repeat;
-      background-size: cover;
       background-position: center;
-
-      &:hover {
-        background-image: none;
-      }
-
-      &:focus-visible {
-        background-image: none;
-      }
-
-      @include retina {
-        background-image: url("../img/tour-6-mobile@2x.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        &:hover {
-          background-image: none;
-        }
-
-        &:focus-visible {
-          background-image: none;
-        }
-      }
+      background-size: cover;
     }
+  }
+}
 
-    &:nth-child(7n) {
-      background-image: url("../img/tour-7-mobile.jpg");
+.tour-catalog__odysseus {
+  background-image: url("../img/tour-4-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include retina {
+    background-image: url("../img/tour-4-desktop@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @include vp-1023 {
+    background-image: url("../img/tour-4-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include retina {
+      background-image: url("../img/tour-4-tablet@2x.jpg");
       background-repeat: no-repeat;
-      background-size: cover;
       background-position: center;
-
-      &:hover {
-        background-image: none;
-      }
-
-      &:focus-visible {
-        background-image: none;
-      }
-
-      @include retina {
-        background-image: url("../img/tour-7-mobile@2x.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-
-        &:hover {
-          background-image: none;
-        }
-
-        &:focus-visible {
-          background-image: none;
-        }
-      }
+      background-size: cover;
     }
+  }
 
-    &:nth-child(8n) {
-      background-image: url("../img/tour-8-mobile.jpg");
+  @include vp-767 {
+    background-image: url("../img/tour-4-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include retina {
+      background-image: url("../img/tour-4-mobile@2x.jpg");
       background-repeat: no-repeat;
-      background-size: cover;
       background-position: center;
+      background-size: cover;
+    }
+  }
+}
 
-      &:hover {
-        background-image: none;
-      }
+.tour-catalog__olympia {
+  background-image: url("../img/tour-5-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 
-      &:focus-visible {
-        background-image: none;
-      }
+  @include retina {
+    background-image: url("../img/tour-5-desktop@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 
-      @include retina {
-        background-image: url("../img/tour-8-mobile@2x.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
+  @include vp-1023 {
+    background-image: url("../img/tour-5-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
-        &:hover {
-          background-image: none;
-        }
+    @include retina {
+      background-image: url("../img/tour-5-tablet@2x.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
 
-        &:focus-visible {
-          background-image: none;
-        }
-      }
+  @include vp-767 {
+    background-image: url("../img/tour-5-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include retina {
+      background-image: url("../img/tour-5-mobile@2x.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
+
+.tour-catalog__avrora {
+  background-image: url("../img/tour-6-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include retina {
+    background-image: url("../img/tour-6-desktop@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @include vp-1023 {
+    background-image: url("../img/tour-6-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include retina {
+      background-image: url("../img/tour-6-tablet@2x.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  @include vp-767 {
+    background-image: url("../img/tour-6-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include retina {
+      background-image: url("../img/tour-6-mobile@2x.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
+
+.tour-catalog__leonor {
+  background-image: url("../img/tour-7-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include retina {
+    background-image: url("../img/tour-7-desktop@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @include vp-1023 {
+    background-image: url("../img/tour-7-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include retina {
+      background-image: url("../img/tour-7-tablet@2x.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  @include vp-767 {
+    background-image: url("../img/tour-7-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include retina {
+      background-image: url("../img/tour-7-mobile@2x.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
+
+.tour-catalog__minion {
+  background-image: url("../img/tour-8-desktop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @include retina {
+    background-image: url("../img/tour-8-desktop@2x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @include vp-1023 {
+    background-image: url("../img/tour-8-tablet.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include retina {
+      background-image: url("../img/tour-8-tablet@2x.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  @include vp-767 {
+    background-image: url("../img/tour-8-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include retina {
+      background-image: url("../img/tour-8-mobile@2x.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
     }
   }
 }
@@ -872,8 +490,8 @@
 .tour-catalog__link {
   color: rgba(1, 28, 64, 1);
   background-color: rgba(249, 251, 253, 1);
-  padding-top: 14px;
-  padding-bottom: 15px;
+  padding-top: 7px;
+  padding-bottom: 6px;
   padding-left: 47px;
   padding-right: 46px;
   font-weight: 600;

@@ -25,7 +25,6 @@ window.addEventListener('DOMContentLoaded', () => {
   navMain.classList.add('main-nav__menu--closed');
   headerWrapper.classList.remove('page-header__wrapper--opened');
 
-
   navToggle.addEventListener('click', function () {
     if (navMain.classList.contains('main-nav__menu--closed')) {
       navMain.classList.remove('main-nav__menu--closed');

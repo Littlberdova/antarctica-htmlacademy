@@ -2,24 +2,23 @@
   padding: 0;
   margin: 0;
   list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
   @include vp-767 {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: unset;
   }
 }
 
 .site-nav__item:not(:last-child) {
-  @include vp-1023 {
-    margin-right: 33px;
-  }
+  margin-right: 33px;
 
-  @include vp-767 {
+  @include vp-1023 {
     margin-right: 23px;
   }
 
-  @include vp-319 {
+  @include vp-767 {
     margin-right: 0;
     margin-bottom: 28px;
   }
@@ -29,6 +28,9 @@
   font-weight: 500;
   padding-top: 13px;
   padding-bottom: 13px;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgba(249, 251, 253, 1);
 
   &:hover {
     color: rgba(249, 251, 253, 0.5);
@@ -40,18 +42,12 @@
   }
 
   @include vp-1023 {
-    font-size: 16px;
-    line-height: 20px;
-    color: rgba(249, 251, 253, 1);
-  }
-
-  @include vp-767 {
     font-size: 14px;
     line-height: 17px;
     color: rgba(249, 251, 253, 1);
   }
 
-  @include vp-319 {
+  @include vp-767 {
     font-size: 18px;
     line-height: 21px;
     color: rgba(1, 28, 64, 1);
