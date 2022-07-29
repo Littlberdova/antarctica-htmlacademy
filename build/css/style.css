@@ -927,7 +927,7 @@ button,
   display: grid;
   margin: 0 auto;
   max-width: 1160px;
-  padding-top: 18px;
+  padding-top: 12px;
   padding-bottom: 120px;
   padding-left: 10px;
   padding-right: 10px;
@@ -941,6 +941,10 @@ button,
   align-items: center;
 }
 
+.trip__container {
+  margin-left: -10px;
+}
+
 .trip__title {
   margin: 0;
   font-weight: 600;
@@ -948,7 +952,7 @@ button,
   font-size: 28px;
   line-height: 42px;
   width: 430px;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .trip__description {
@@ -957,6 +961,10 @@ button,
   font-size: 16px;
   line-height: 24px;
   width: 512px;
+}
+
+.trip__picture-wrapper {
+  width: 560px;
 }
 
 .trip__picture {
@@ -974,7 +982,7 @@ button,
 .adavantages__container {
   max-width: 1160px;
   margin: 0 auto;
-  padding-top: 120px;
+  padding-top: 106px;
   padding-bottom: 120px;
   padding-left: 10px;
   padding-right: 10px;
@@ -984,7 +992,7 @@ button,
   margin: 0;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 48px;
   font-size: 28px;
   line-height: 42px;
 }
@@ -1001,42 +1009,51 @@ button,
   -moz-column-gap: 40px;
   column-gap: 40px;
   row-gap: 40px;
+  margin-right: -10px;
 }
 
 .adavantages__list-item {
   position: relative;
   background-color: #f9fbfd;
-  padding-top: 67px;
+  padding-top: 73px;
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 22px;
-  background-repeat: no-repeat;
 }
 
-.adavantages__list-item:nth-child(1n)::before {
+.adavantages__item-boat::before {
   content: "";
   position: absolute;
   background-image: url("../img/boat.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   left: 30px;
   top: 22px;
   width: 27px;
   height: 32px;
 }
 
-.adavantages__list-item:nth-child(2n)::before {
+.adavantages__item-checked::before {
   content: "";
   position: absolute;
   background-image: url("../img/checked.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   left: 30px;
   top: 30px;
   width: 38px;
   height: 21px;
 }
 
-.adavantages__list-item:nth-child(3n)::before {
+.adavantages__item-speedboat::before {
   content: "";
   position: absolute;
   background-image: url("../img/speedboat.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   left: 30px;
   top: 30px;
   width: 42px;
@@ -1050,7 +1067,7 @@ button,
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   font-size: 18px;
   line-height: 27px;
   max-width: 296px;
@@ -1062,7 +1079,7 @@ button,
   font-size: 14px;
   line-height: 19px;
   width: auto;
-  max-width: 288px;
+  max-width: 247px;
 }
 
 .tour-catalog__wrapper {
@@ -1116,17 +1133,19 @@ button,
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 35px;
-  padding-bottom: 35px;
+  padding-bottom: 18px;
   max-width: 260px;
   width: unset;
 }
 
 .tour-catalog__item:hover {
   background-image: none;
+  padding-bottom: 32px;
 }
 
 .tour-catalog__item:focus-visible {
   background-image: none;
+  padding-bottom: 32px;
 }
 
 .tour-catalog__item:hover .tour-catalog__item-options {
@@ -1277,7 +1296,7 @@ button,
 }
 
 .options__item:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 13px;
 }
 
 .booking {
@@ -1316,9 +1335,9 @@ button,
   font-weight: 700;
   word-wrap: break-word;
   font-size: 40px;
-  line-height: 3px;
+  line-height: 24px;
   margin: 0;
-  margin-bottom: 39px;
+  margin-bottom: 16px;
   width: 493px;
 }
 
@@ -1376,8 +1395,8 @@ button,
 .form__input-item input {
   background-color: #f9fbfd;
   border: none;
-  padding-top: 11px;
-  padding-bottom: 11px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   padding-left: 16px;
   padding-right: 16px;
   width: 100%;
@@ -1386,8 +1405,8 @@ button,
 .form__button {
   background-color: #f9fbfd;
   border: none;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 13px;
+  padding-bottom: 13px;
   padding-left: 15px;
   padding-right: 15px;
   font-weight: 600;
@@ -1774,6 +1793,10 @@ button,
     transform: translateY(-23px);
   }
 
+  .trip__container {
+    margin-left: 0;
+  }
+
   .trip__title {
     font-size: 26px;
     line-height: 36px;
@@ -1782,6 +1805,10 @@ button,
   }
 
   .trip__description {
+    width: 324px;
+  }
+
+  .trip__picture-wrapper {
     width: 324px;
   }
 
@@ -1808,28 +1835,27 @@ button,
   }
 
   .adavantages__list-item {
-    padding-top: 59px;
+    padding-top: 72px;
     padding-left: 17px;
     padding-right: 17px;
     padding-bottom: 25px;
-    background-repeat: no-repeat;
   }
 
-  .adavantages__list-item:nth-child(1n)::before {
+  .adavantages__item-boat::before {
     left: 20px;
     top: 25px;
     width: 21px;
     height: 26px;
   }
 
-  .adavantages__list-item:nth-child(2n)::before {
+  .adavantages__item-checked::before {
     left: 20px;
     top: 29px;
     width: 33px;
     height: 19px;
   }
 
-  .adavantages__list-item:nth-child(3n)::before {
+  .adavantages__item-speedboat::before {
     left: 20px;
     top: 32px;
     width: 38px;
@@ -1837,7 +1863,7 @@ button,
   }
 
   .adavantages__list-item-name {
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     font-size: 18px;
     line-height: 25px;
     width: auto;
@@ -1849,7 +1875,7 @@ button,
 
   .tour-catalog__wrapper {
     width: auto;
-    padding-top: 80px;
+    padding-top: 94px;
     padding-bottom: 100px;
     padding-left: 60px;
     padding-right: 60px;
@@ -1875,9 +1901,25 @@ button,
     padding-left: 35px;
     padding-right: 35px;
     padding-top: 35px;
-    padding-bottom: 35px;
+    padding-bottom: 30px;
     width: 309px;
     max-width: 309px;
+  }
+
+  .tour-catalog__item:hover {
+    padding-bottom: 40px;
+  }
+
+  .tour-catalog__item:focus-visible {
+    padding-bottom: 40px;
+  }
+
+  .tour-catalog__item:hover .tour-catalog__item-name {
+    margin-bottom: 19px;
+  }
+
+  .tour-catalog__item:focus-visible .tour-catalog__item-name {
+    margin-bottom: 19px;
   }
 
   .tour-catalog__astoria {
@@ -1970,7 +2012,7 @@ button,
   }
 
   .booking__description-container {
-    margin-bottom: 60px;
+    margin-bottom: 49px;
   }
 
   .booking__offer-description {
@@ -1984,6 +2026,10 @@ button,
     width: 403px;
     padding: 50px;
     padding-top: 41px;
+  }
+
+  .form__accept-wrapper {
+    padding-top: 28px;
   }
 
   .contacts__wrapper {
@@ -2047,7 +2093,7 @@ button,
   }
 
   .social__item:not(:last-child) {
-    margin-right: 23px;
+    margin-right: 21px;
   }
 
   .navigation__wrapper {
@@ -2375,6 +2421,17 @@ button,
     width: auto;
   }
 
+  .trip__picture-wrapper {
+    width: auto;
+  }
+
+  .adavantages {
+    padding-top: 120px;
+    -webkit-transform: translateY(-113px);
+    -ms-transform: translateY(-113px);
+    transform: translateY(-113px);
+  }
+
   .adavantages__container {
     width: auto;
     padding-left: 15px;
@@ -2387,7 +2444,7 @@ button,
   }
 
   .adavantages__title {
-    margin-bottom: 40px;
+    margin-bottom: 28px;
     font-size: 24px;
     line-height: 36px;
   }
@@ -2401,11 +2458,21 @@ button,
     row-gap: 30px;
   }
 
+  .adavantages__list-item {
+    padding-bottom: 13px;
+  }
+
   .adavantages__list-item-name {
     margin-bottom: 20px;
     font-size: 18px;
     line-height: 25px;
     width: 170px;
+  }
+
+  .tour-catalog {
+    -webkit-transform: translateY(-110px);
+    -ms-transform: translateY(-110px);
+    transform: translateY(-110px);
   }
 
   .tour-catalog__wrapper {
@@ -2420,7 +2487,7 @@ button,
     font-size: 24px;
     line-height: 36px;
     width: 259px;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
   }
 
   .tour-catalog__list {
@@ -2436,7 +2503,7 @@ button,
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 35px;
-    padding-bottom: 35px;
+    padding-bottom: 17px;
     width: auto;
   }
 
@@ -2497,6 +2564,9 @@ button,
   }
 
   .booking {
+    -webkit-transform: translateY(-102px);
+    -ms-transform: translateY(-102px);
+    transform: translateY(-102px);
     background-image: url("../img/booking-bg-mobile.jpg");
     background-color: #477ea2;
     background-repeat: no-repeat;
@@ -2524,13 +2594,13 @@ button,
     line-height: 31px;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 25px;
+    margin-bottom: 8px;
     width: 194px;
     text-align: center;
   }
 
   .booking__description-container {
-    margin-bottom: 13px;
+    margin-bottom: 31px;
   }
 
   .booking__offer-description {
@@ -2552,7 +2622,22 @@ button,
     font-size: 18px;
     line-height: 25px;
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 26px;
+  }
+
+  .form__accept-wrapper {
+    padding-top: 18px;
+    padding-bottom: 26px;
+  }
+
+  .form__label {
+    margin-left: 30px;
+  }
+
+  .contacts {
+    -webkit-transform: translateY(-98px);
+    -ms-transform: translateY(-98px);
+    transform: translateY(-98px);
   }
 
   .contacts__wrapper {
@@ -2584,7 +2669,13 @@ button,
   }
 
   .address__notion {
-    margin-bottom: 15px;
+    margin-bottom: 23px;
+  }
+
+  .page-footer {
+    -webkit-transform: translateY(-98px);
+    -ms-transform: translateY(-98px);
+    transform: translateY(-98px);
   }
 
   .page-footer__wrapper {

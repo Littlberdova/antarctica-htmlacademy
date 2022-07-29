@@ -12,12 +12,17 @@
     background-position: center;
     background-size: cover;
   }
+
+  @include vp-767 {
+    padding-top: 120px;
+    transform: translateY(-113px);
+  }
 }
 
 .adavantages__container {
   max-width: 1160px;
   margin: 0 auto;
-  padding-top: 120px;
+  padding-top: 106px;
   padding-bottom: 120px;
   padding-left: 10px;
   padding-right: 10px;
@@ -44,7 +49,7 @@
   margin: 0;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 48px;
   font-size: 28px;
   line-height: 42px;
 
@@ -54,7 +59,7 @@
   }
 
   @include vp-767 {
-    margin-bottom: 40px;
+    margin-bottom: 28px;
     font-size: 24px;
     line-height: 36px;
   }
@@ -68,6 +73,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 40px;
   row-gap: 40px;
+  margin-right: -10px;
 
   @include vp-1023 {
     grid-template-columns: 1fr 1fr 1fr;
@@ -85,70 +91,80 @@
 .adavantages__list-item {
   position: relative;
   background-color: rgba(249, 251, 253, 1);
-  padding-top: 67px;
+  padding-top: 73px;
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 22px;
-  background-repeat: no-repeat;
-
-  &:nth-child(1n)::before {
-    content: "";
-    position: absolute;
-    background-image: url("../img/boat.svg");
-    left: 30px;
-    top: 22px;
-    width: 27px;
-    height: 32px;
-  }
-
-  &:nth-child(2n)::before {
-    content: "";
-    position: absolute;
-    background-image: url("../img/checked.svg");
-    left: 30px;
-    top: 30px;
-    width: 38px;
-    height: 21px;
-  }
-
-  &:nth-child(3n)::before {
-    content: "";
-    position: absolute;
-    background-image: url("../img/speedboat.svg");
-    left: 30px;
-    top: 30px;
-    width: 42px;
-    height: 15px;
-  }
 
   @include vp-1023 {
-    padding-top: 59px;
+    padding-top: 72px;
     padding-left: 17px;
     padding-right: 17px;
     padding-bottom: 25px;
-    background-repeat: no-repeat;
+  }
 
+  @include vp-767 {
+    padding-bottom: 13px;
+  }
+}
 
-    &:nth-child(1n)::before {
-      left: 20px;
-      top: 25px;
-      width: 21px;
-      height: 26px;
-    }
+.adavantages__item-boat::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/boat.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  left: 30px;
+  top: 22px;
+  width: 27px;
+  height: 32px;
 
-    &:nth-child(2n)::before {
-      left: 20px;
-      top: 29px;
-      width: 33px;
-      height: 19px;
-    }
+  @include vp-1023 {
+    left: 20px;
+    top: 25px;
+    width: 21px;
+    height: 26px;
+  }
+}
 
-    &:nth-child(3n)::before {
-      left: 20px;
-      top: 32px;
-      width: 38px;
-      height: 13px;
-    }
+.adavantages__item-checked::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/checked.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  left: 30px;
+  top: 30px;
+  width: 38px;
+  height: 21px;
+
+  @include vp-1023 {
+    left: 20px;
+    top: 29px;
+    width: 33px;
+    height: 19px;
+  }
+}
+
+.adavantages__item-speedboat::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/speedboat.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  left: 30px;
+  top: 30px;
+  width: 42px;
+  height: 15px;
+
+  @include vp-1023 {
+    left: 20px;
+    top: 32px;
+    width: 38px;
+    height: 13px;
   }
 }
 
@@ -157,13 +173,13 @@
   font-weight: 500;
   word-wrap: break-word;
   width: max-content;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   font-size: 18px;
   line-height: 27px;
   max-width: 296px;
 
   @include vp-1023 {
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     font-size: 18px;
     line-height: 25px;
     width: auto;
@@ -183,7 +199,7 @@
   font-size: 14px;
   line-height: 19px;
   width: auto;
-  max-width: 288px;
+  max-width: 247px;
 
   @include vp-1023 {
     width: auto;

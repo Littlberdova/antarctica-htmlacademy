@@ -1,3 +1,10 @@
+.tour-catalog {
+  @include vp-767 {
+    transform: translateY(-110px);
+  }
+}
+
+
 .tour-catalog__wrapper {
   max-width: 1160px;
   margin: 0 auto;
@@ -8,7 +15,7 @@
 
   @include vp-1023 {
     width: auto;
-    padding-top: 80px;
+    padding-top: 94px;
     padding-bottom: 100px;
     padding-left: 60px;
     padding-right: 60px;
@@ -43,7 +50,7 @@
     font-size: 24px;
     line-height: 36px;
     width: 259px;
-    margin-bottom: 40px;
+    margin-bottom: 32px;
   }
 }
 
@@ -79,16 +86,18 @@
   padding-left: 25px;
   padding-right: 25px;
   padding-top: 35px;
-  padding-bottom: 35px;
+  padding-bottom: 18px;
   max-width: 260px;
   width: unset;
 
   &:hover {
     background-image: none;
+    padding-bottom: 32px;
   }
 
   &:focus-visible {
     background-image: none;
+    padding-bottom: 32px;
   }
 
   &:hover .tour-catalog__item-options {
@@ -121,16 +130,32 @@
     padding-left: 35px;
     padding-right: 35px;
     padding-top: 35px;
-    padding-bottom: 35px;
+    padding-bottom: 30px;
     width: 309px;
     max-width: 309px;
+
+    &:hover {
+      padding-bottom: 40px;
+    }
+
+    &:focus-visible {
+      padding-bottom: 40px;
+    }
+
+    &:hover .tour-catalog__item-name {
+      margin-bottom: 19px;
+    }
+
+    &:focus-visible .tour-catalog__item-name {
+      margin-bottom: 19px;
+    }
   }
 
   @include vp-767 {
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 35px;
-    padding-bottom: 35px;
+    padding-bottom: 17px;
     width: auto;
   }
 }

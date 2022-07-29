@@ -3,7 +3,7 @@
   display: grid;
   margin: 0 auto;
   max-width: 1160px;
-  padding-top: 18px;
+  padding-top: 12px;
   padding-bottom: 120px;
   padding-left: 10px;
   padding-right: 10px;
@@ -38,6 +38,14 @@
   }
 }
 
+.trip__container {
+  margin-left: -10px;
+
+  @include vp-1023 {
+    margin-left: 0;
+  }
+}
+
 .trip__title {
   margin: 0;
   font-weight: 600;
@@ -45,7 +53,7 @@
   font-size: 28px;
   line-height: 42px;
   width: 430px;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 
   @include vp-1023 {
     font-size: 26px;
@@ -68,6 +76,18 @@
   font-size: 16px;
   line-height: 24px;
   width: 512px;
+
+  @include vp-1023 {
+    width: 324px;
+  }
+
+  @include vp-767 {
+    width: auto;
+  }
+}
+
+.trip__picture-wrapper {
+  width: 560px;
 
   @include vp-1023 {
     width: 324px;

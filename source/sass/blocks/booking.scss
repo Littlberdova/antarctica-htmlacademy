@@ -30,6 +30,7 @@
   }
 
   @include vp-767 {
+    transform: translateY(-102px);
     background-image: url("../img/booking-bg-mobile.jpg");
     background-color: rgba(71, 126, 162, 1);
     background-repeat: no-repeat;
@@ -84,9 +85,9 @@
   font-weight: 700;
   word-wrap: break-word;
   font-size: 40px;
-  line-height: 3px;
+  line-height: 24px;
   margin: 0;
-  margin-bottom: 39px;
+  margin-bottom: 16px;
   width: 493px;
 
   @include vp-1023 {
@@ -104,7 +105,7 @@
     line-height: 31px;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 25px;
+    margin-bottom: 8px;
     width: 194px;
     text-align: center;
   }
@@ -112,11 +113,11 @@
 
 .booking__description-container {
   @include vp-1023 {
-    margin-bottom: 60px;
+    margin-bottom: 49px;
   }
 
   @include vp-767 {
-    margin-bottom: 13px;
+    margin-bottom: 31px;
   }
 }
 
