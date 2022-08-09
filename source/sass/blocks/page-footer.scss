@@ -11,13 +11,16 @@
   flex-wrap: wrap;
   margin: 0 auto;
   max-width: 1160px;
-  padding-left: 10px;
-  padding-right: 10px;
   padding-top: 50px;
   padding-bottom: 50px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
+  @include vp-1279 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 
   @include vp-1023 {
     width: auto;
@@ -33,7 +36,7 @@
     width: auto;
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 40px;
+    padding-top: 32px;
     padding-bottom: 40px;
     flex-direction: column;
     align-items: flex-start;
@@ -41,10 +44,14 @@
 }
 
 .page-footer__logo-wrapper {
-  margin-right: -320px;
+  margin-right: -303px;
 
   @include vp-1023 {
     margin-right: -56px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 13px;
   }
 }
 

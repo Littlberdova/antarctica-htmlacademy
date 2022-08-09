@@ -43,7 +43,7 @@
     font-size: 26px;
     line-height: 39px;
     width: 281px;
-    margin-bottom: 52px;
+    margin-bottom: 45px;
   }
 
   @include vp-767 {
@@ -119,11 +119,11 @@
   }
 
   &:hover .tour-catalog__item-name {
-    margin-bottom: 25px;
+    margin-bottom: 9px;
   }
 
   &:focus-visible .tour-catalog__item-name {
-    margin-bottom: 25px;
+    margin-bottom: 9px;
   }
 
   @include vp-1023 {
@@ -135,7 +135,7 @@
     max-width: 309px;
 
     &:hover {
-      padding-bottom: 40px;
+      padding-bottom: 38px;
     }
 
     &:focus-visible {
@@ -143,11 +143,11 @@
     }
 
     &:hover .tour-catalog__item-name {
-      margin-bottom: 19px;
+      margin-bottom: 14px;
     }
 
     &:focus-visible .tour-catalog__item-name {
-      margin-bottom: 19px;
+      margin-bottom: 14px;
     }
   }
 
@@ -515,8 +515,8 @@
 .tour-catalog__link {
   color: rgba(1, 28, 64, 1);
   background-color: rgba(249, 251, 253, 1);
-  padding-top: 7px;
-  padding-bottom: 6px;
+  padding-top: 11px;
+  padding-bottom: 10px;
   padding-left: 47px;
   padding-right: 46px;
   font-weight: 600;
@@ -525,4 +525,9 @@
   margin-top: 30px;
   display: none;
   text-align: center;
+
+  @include vp-1023 {
+    margin-top: 23px;
+    padding-bottom: 7px;
+  }
 }

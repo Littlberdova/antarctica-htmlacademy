@@ -812,8 +812,6 @@ button,
   align-items: center;
   margin: 0 auto;
   max-width: 1160px;
-  padding-left: 10px;
-  padding-right: 10px;
   padding-top: 35px;
   padding-bottom: 577px;
 }
@@ -983,16 +981,14 @@ button,
   max-width: 1160px;
   margin: 0 auto;
   padding-top: 106px;
-  padding-bottom: 120px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-bottom: 121px;
 }
 
 .adavantages__title {
   margin: 0;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 53px;
   font-size: 28px;
   line-height: 42px;
 }
@@ -1015,7 +1011,7 @@ button,
 .adavantages__list-item {
   position: relative;
   background-color: #f9fbfd;
-  padding-top: 73px;
+  padding-top: 83px;
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 22px;
@@ -1029,7 +1025,7 @@ button,
   background-position: center;
   background-size: contain;
   left: 30px;
-  top: 22px;
+  top: 29px;
   width: 27px;
   height: 32px;
 }
@@ -1041,8 +1037,8 @@ button,
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  left: 30px;
-  top: 30px;
+  left: 27px;
+  top: 34px;
   width: 38px;
   height: 21px;
 }
@@ -1054,8 +1050,8 @@ button,
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  left: 30px;
-  top: 30px;
+  left: 23px;
+  top: 36px;
   width: 42px;
   height: 15px;
 }
@@ -1177,11 +1173,11 @@ button,
 }
 
 .tour-catalog__item:hover .tour-catalog__item-name {
-  margin-bottom: 25px;
+  margin-bottom: 9px;
 }
 
 .tour-catalog__item:focus-visible .tour-catalog__item-name {
-  margin-bottom: 25px;
+  margin-bottom: 9px;
 }
 
 .tour-catalog__astoria {
@@ -1259,8 +1255,8 @@ button,
 .tour-catalog__link {
   color: #011c40;
   background-color: #f9fbfd;
-  padding-top: 7px;
-  padding-bottom: 6px;
+  padding-top: 11px;
+  padding-bottom: 10px;
   padding-left: 47px;
   padding-right: 46px;
   font-weight: 600;
@@ -1296,7 +1292,7 @@ button,
 }
 
 .options__item:not(:last-child) {
-  margin-bottom: 13px;
+  margin-bottom: 14px;
 }
 
 .booking {
@@ -1348,6 +1344,9 @@ button,
   width: 352px;
   margin: 0;
   text-align: left;
+  -webkit-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
 }
 
 .form__wrapper {
@@ -1367,9 +1366,9 @@ button,
   color: #f9fbfd;
   font-weight: 500;
   font-size: 18px;
-  line-height: 27px;
+  line-height: 23px;
   margin: 0;
-  margin-bottom: 27px;
+  margin-bottom: 31px;
 }
 
 .form__inputs-list {
@@ -1402,11 +1401,36 @@ button,
   width: 100%;
 }
 
+.form__input-item input::-webkit-input-placeholder {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.form__input-item input::-moz-placeholder {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.form__input-item input:-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.form__input-item input::-ms-input-placeholder {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.form__input-item input::placeholder {
+  font-size: 14px;
+  line-height: 21px;
+}
+
 .form__button {
   background-color: #f9fbfd;
   border: none;
-  padding-top: 13px;
-  padding-bottom: 13px;
+  padding-top: 11px;
+  padding-bottom: 11px;
   padding-left: 15px;
   padding-right: 15px;
   font-weight: 600;
@@ -1426,7 +1450,7 @@ button,
   -ms-flex-align: center;
   align-items: center;
   padding-top: 20px;
-  padding-bottom: 30px;
+  padding-bottom: 34px;
 }
 
 .form__accept-label {
@@ -1493,8 +1517,6 @@ button,
   align-items: center;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  padding-left: 10px;
-  padding-right: 10px;
 }
 
 .contacts__map {
@@ -1525,7 +1547,7 @@ button,
   line-height: 27px;
   width: 500;
   word-wrap: break-word;
-  margin-bottom: 29px;
+  margin-bottom: 22px;
 }
 
 .address__location {
@@ -1536,6 +1558,9 @@ button,
   margin-bottom: 33px;
   padding-left: 28px;
   position: relative;
+  -webkit-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
 }
 
 .address__location::before {
@@ -1546,7 +1571,7 @@ button,
   width: 18px;
   height: 22px;
   left: 0;
-  top: 50%;
+  top: 32%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -1586,8 +1611,6 @@ button,
   flex-wrap: wrap;
   margin: 0 auto;
   max-width: 1160px;
-  padding-left: 10px;
-  padding-right: 10px;
   padding-top: 50px;
   padding-bottom: 50px;
   -webkit-box-orient: horizontal;
@@ -1603,7 +1626,7 @@ button,
 }
 
 .page-footer__logo-wrapper {
-  margin-right: -320px;
+  margin-right: -303px;
 }
 
 .social__list {
@@ -1618,7 +1641,12 @@ button,
 }
 
 .social__item:not(:last-child) {
-  margin-right: 28px;
+  margin-right: 27px;
+}
+
+.social__navigation-icon {
+  width: 20px;
+  height: 20px;
 }
 
 .navigation__wrapper {
@@ -1677,6 +1705,28 @@ button,
 @media (max-width: 1439px) {
   .container {
     padding: 0 32px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .page-header__wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .adavantages__container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .contacts__wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .page-footer__wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
@@ -1780,7 +1830,7 @@ button,
     margin: 0;
     width: auto;
     padding-top: 0;
-    padding-bottom: 100px;
+    padding-bottom: 70px;
     padding-left: 45px;
     padding-right: 45px;
     -ms-grid-columns: 1fr 1fr;
@@ -1795,6 +1845,7 @@ button,
 
   .trip__container {
     margin-left: 0;
+    margin-bottom: -9px;
   }
 
   .trip__title {
@@ -1816,8 +1867,8 @@ button,
     width: auto;
     padding-left: 45px;
     padding-right: 45px;
-    padding-top: 60px;
-    padding-bottom: 100px;
+    padding-top: 87px;
+    padding-bottom: 97px;
   }
 
   .adavantages__title {
@@ -1836,13 +1887,13 @@ button,
 
   .adavantages__list-item {
     padding-top: 72px;
-    padding-left: 17px;
+    padding-left: 21px;
     padding-right: 17px;
     padding-bottom: 25px;
   }
 
   .adavantages__item-boat::before {
-    left: 20px;
+    left: 24px;
     top: 25px;
     width: 21px;
     height: 26px;
@@ -1871,6 +1922,7 @@ button,
 
   .adavantages__list-item-description {
     width: auto;
+    line-height: 19.6px;
   }
 
   .tour-catalog__wrapper {
@@ -1885,7 +1937,7 @@ button,
     font-size: 26px;
     line-height: 39px;
     width: 281px;
-    margin-bottom: 52px;
+    margin-bottom: 45px;
   }
 
   .tour-catalog__list {
@@ -1907,7 +1959,7 @@ button,
   }
 
   .tour-catalog__item:hover {
-    padding-bottom: 40px;
+    padding-bottom: 38px;
   }
 
   .tour-catalog__item:focus-visible {
@@ -1915,11 +1967,11 @@ button,
   }
 
   .tour-catalog__item:hover .tour-catalog__item-name {
-    margin-bottom: 19px;
+    margin-bottom: 14px;
   }
 
   .tour-catalog__item:focus-visible .tour-catalog__item-name {
-    margin-bottom: 19px;
+    margin-bottom: 14px;
   }
 
   .tour-catalog__astoria {
@@ -1978,6 +2030,15 @@ button,
     background-position: center;
   }
 
+  .tour-catalog__link {
+    margin-top: 23px;
+    padding-bottom: 7px;
+  }
+
+  .options__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
   .booking {
     background-image: url("../img/booking-bg-tablet.jpg");
     background-color: #477ea2;
@@ -2012,7 +2073,7 @@ button,
   }
 
   .booking__description-container {
-    margin-bottom: 49px;
+    margin-bottom: 52px;
   }
 
   .booking__offer-description {
@@ -2020,16 +2081,28 @@ button,
     line-height: 27px;
     width: 352px;
     margin: 0 auto;
+    -webkit-transform: translateY(1px);
+    -ms-transform: translateY(1px);
+    transform: translateY(1px);
   }
 
   .form__wrapper {
     width: 403px;
     padding: 50px;
-    padding-top: 41px;
+    padding-top: 46px;
+  }
+
+  .form__description {
+    line-height: 25px;
+    margin-bottom: 29px;
+  }
+
+  .form__input-item:not(:last-child) {
+    margin-bottom: 21px;
   }
 
   .form__accept-wrapper {
-    padding-top: 28px;
+    padding-top: 22px;
   }
 
   .contacts__wrapper {
@@ -2069,6 +2142,12 @@ button,
     margin-bottom: 20px;
   }
 
+  .address__location {
+    -webkit-transform: translateY(11px);
+    -ms-transform: translateY(11px);
+    transform: translateY(11px);
+  }
+
   .page-footer__wrapper {
     width: auto;
     padding-left: 45px;
@@ -2092,8 +2171,19 @@ button,
     width: 39px;
   }
 
+  .social {
+    -webkit-transform: translateY(3px);
+    -ms-transform: translateY(3px);
+    transform: translateY(3px);
+  }
+
   .social__item:not(:last-child) {
     margin-right: 21px;
+  }
+
+  .social__navigation-icon {
+    width: 16px;
+    height: 16px;
   }
 
   .navigation__wrapper {
@@ -2396,7 +2486,7 @@ button,
     margin: 0;
     width: auto;
     padding-top: 0;
-    padding-bottom: 65px;
+    padding-bottom: 87px;
     padding-left: 15px;
     padding-right: 15px;
     -ms-grid-columns: 1fr;
@@ -2405,16 +2495,16 @@ button,
     -moz-column-gap: 0;
     column-gap: 0;
     row-gap: 40px;
-    -webkit-transform: translateY(-98px);
-    -ms-transform: translateY(-98px);
-    transform: translateY(-98px);
+    -webkit-transform: translateY(-90px);
+    -ms-transform: translateY(-90px);
+    transform: translateY(-90px);
   }
 
   .trip__title {
     font-size: 24px;
     line-height: 33px;
     width: 190px;
-    margin-bottom: 30px;
+    margin-bottom: 19px;
   }
 
   .trip__description {
@@ -2427,6 +2517,7 @@ button,
 
   .adavantages {
     padding-top: 120px;
+    padding-bottom: 8px;
     -webkit-transform: translateY(-113px);
     -ms-transform: translateY(-113px);
     transform: translateY(-113px);
@@ -2459,11 +2550,20 @@ button,
   }
 
   .adavantages__list-item {
-    padding-bottom: 13px;
+    padding-bottom: 20px;
+  }
+
+  .adavantages__item-boat::before {
+    top: 23px;
+    left: 20px;
+  }
+
+  .adavantages__item-speedboat::before {
+    top: 36px;
   }
 
   .adavantages__list-item-name {
-    margin-bottom: 20px;
+    margin-bottom: 7px;
     font-size: 18px;
     line-height: 25px;
     width: 170px;
@@ -2576,8 +2676,8 @@ button,
 
   .booking__wrapper {
     width: auto;
-    padding-top: 65px;
-    padding-bottom: 52px;
+    padding-top: 59px;
+    padding-bottom: 68px;
     padding-left: 15px;
     padding-right: 15px;
     -webkit-box-orient: vertical;
@@ -2594,13 +2694,13 @@ button,
     line-height: 31px;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 8px;
+    margin-bottom: 14px;
     width: 194px;
     text-align: center;
   }
 
   .booking__description-container {
-    margin-bottom: 31px;
+    margin-bottom: 33px;
   }
 
   .booking__offer-description {
@@ -2612,7 +2712,7 @@ button,
 
   .form__wrapper {
     width: 290px;
-    padding-top: 40px;
+    padding-top: 35px;
     padding-bottom: 40px;
     padding-left: 30px;
     padding-right: 30px;
@@ -2642,8 +2742,8 @@ button,
 
   .contacts__wrapper {
     width: auto;
-    padding-top: 65px;
-    padding-bottom: 48px;
+    padding-top: 50px;
+    padding-bottom: 56px;
     padding-left: 15px;
     padding-right: 15px;
     -webkit-box-orient: vertical;
@@ -2669,7 +2769,7 @@ button,
   }
 
   .address__notion {
-    margin-bottom: 23px;
+    margin-bottom: 20px;
   }
 
   .page-footer {
@@ -2682,7 +2782,7 @@ button,
     width: auto;
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 40px;
+    padding-top: 32px;
     padding-bottom: 40px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2693,12 +2793,16 @@ button,
     align-items: flex-start;
   }
 
+  .page-footer__logo-wrapper {
+    margin-bottom: 13px;
+  }
+
   .social {
-    margin-top: 26px;
+    margin-top: 23px;
   }
 
   .social__item:not(:last-child) {
-    margin-right: 23px;
+    margin-right: 19px;
   }
 
   .navigation__wrapper {
@@ -2716,7 +2820,7 @@ button,
 
   .navigation__item:not(:last-child) {
     margin-right: 0;
-    margin-bottom: 16px;
+    margin-bottom: 13px;
   }
 
   .navigation__link {

@@ -35,10 +35,13 @@
   align-items: center;
   margin: 0 auto;
   max-width: 1160px;
-  padding-left: 10px;
-  padding-right: 10px;
   padding-top: 35px;
   padding-bottom: 577px;
+
+  @include vp-1279 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 
   @include vp-1023 {
     padding-bottom: 593px;

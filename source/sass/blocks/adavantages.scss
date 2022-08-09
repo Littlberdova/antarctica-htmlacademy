@@ -15,6 +15,7 @@
 
   @include vp-767 {
     padding-top: 120px;
+    padding-bottom: 8px;
     transform: translateY(-113px);
   }
 }
@@ -23,16 +24,19 @@
   max-width: 1160px;
   margin: 0 auto;
   padding-top: 106px;
-  padding-bottom: 120px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-bottom: 121px;
+
+  @include vp-1279 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 
   @include vp-1023 {
     width: auto;
     padding-left: 45px;
     padding-right: 45px;
-    padding-top: 60px;
-    padding-bottom: 100px;
+    padding-top: 87px;
+    padding-bottom: 97px;
   }
 
   @include vp-767 {
@@ -49,7 +53,7 @@
   margin: 0;
   font-weight: 600;
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 53px;
   font-size: 28px;
   line-height: 42px;
 
@@ -91,20 +95,20 @@
 .adavantages__list-item {
   position: relative;
   background-color: rgba(249, 251, 253, 1);
-  padding-top: 73px;
+  padding-top: 83px;
   padding-left: 30px;
   padding-right: 30px;
   padding-bottom: 22px;
 
   @include vp-1023 {
     padding-top: 72px;
-    padding-left: 17px;
+    padding-left: 21px;
     padding-right: 17px;
     padding-bottom: 25px;
   }
 
   @include vp-767 {
-    padding-bottom: 13px;
+    padding-bottom: 20px;
   }
 }
 
@@ -116,15 +120,20 @@
   background-position: center;
   background-size: contain;
   left: 30px;
-  top: 22px;
+  top: 29px;
   width: 27px;
   height: 32px;
 
   @include vp-1023 {
-    left: 20px;
+    left: 24px;
     top: 25px;
     width: 21px;
     height: 26px;
+  }
+
+  @include vp-767 {
+    top: 23px;
+    left: 20px;
   }
 }
 
@@ -135,8 +144,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  left: 30px;
-  top: 30px;
+  left: 27px;
+  top: 34px;
   width: 38px;
   height: 21px;
 
@@ -155,8 +164,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  left: 30px;
-  top: 30px;
+  left: 23px;
+  top: 36px;
   width: 42px;
   height: 15px;
 
@@ -165,6 +174,10 @@
     top: 32px;
     width: 38px;
     height: 13px;
+  }
+
+  @include vp-767 {
+    top: 36px;
   }
 }
 
@@ -186,7 +199,7 @@
   }
 
   @include vp-767 {
-    margin-bottom: 20px;
+    margin-bottom: 7px;
     font-size: 18px;
     line-height: 25px;
     width: 170px;
@@ -203,5 +216,6 @@
 
   @include vp-1023 {
     width: auto;
+    line-height: 19.6px;
   }
 }

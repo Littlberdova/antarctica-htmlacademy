@@ -1,6 +1,10 @@
 .social {
+  @include vp-1023 {
+    transform: translateY(3px);
+  }
+
   @include vp-767 {
-    margin-top: 26px;
+    margin-top: 23px;
   }
 }
 
@@ -13,13 +17,23 @@
 }
 
 .social__item:not(:last-child) {
-  margin-right: 28px;
+  margin-right: 27px;
 
   @include vp-1023 {
     margin-right: 21px;
   }
 
   @include vp-767 {
-    margin-right: 23px;
+    margin-right: 19px;
+  }
+}
+
+.social__navigation-icon {
+  width: 20px;
+  height: 20px;
+
+  @include vp-1023 {
+    width: 16px;
+    height: 16px;
   }
 }

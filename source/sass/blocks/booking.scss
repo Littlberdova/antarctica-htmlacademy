@@ -72,8 +72,8 @@
 
   @include vp-767 {
     width: auto;
-    padding-top: 65px;
-    padding-bottom: 52px;
+    padding-top: 59px;
+    padding-bottom: 68px;
     padding-left: 15px;
     padding-right: 15px;
     flex-direction: column;
@@ -105,7 +105,7 @@
     line-height: 31px;
     margin-right: auto;
     margin-left: auto;
-    margin-bottom: 8px;
+    margin-bottom: 14px;
     width: 194px;
     text-align: center;
   }
@@ -113,11 +113,11 @@
 
 .booking__description-container {
   @include vp-1023 {
-    margin-bottom: 49px;
+    margin-bottom: 52px;
   }
 
   @include vp-767 {
-    margin-bottom: 31px;
+    margin-bottom: 33px;
   }
 }
 
@@ -128,12 +128,14 @@
   width: 352px;
   margin: 0;
   text-align: left;
+  transform: translateY(10px);
 
   @include vp-1023 {
     font-size: 18px;
     line-height: 27px;
     width: 352px;
     margin: 0 auto;
+    transform: translateY(1px);
   }
 
   @include vp-767 {

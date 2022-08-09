@@ -15,7 +15,7 @@
     margin: 0;
     width: auto;
     padding-top: 0;
-    padding-bottom: 100px;
+    padding-bottom: 70px;
     padding-left: 45px;
     padding-right: 45px;
     grid-template-columns: 1fr 1fr;
@@ -28,13 +28,13 @@
     margin: 0;
     width: auto;
     padding-top: 0;
-    padding-bottom: 65px;
+    padding-bottom: 87px;
     padding-left: 15px;
     padding-right: 15px;
     grid-template-columns: 1fr;
     column-gap: 0;
     row-gap: 40px;
-    transform: translateY(-98px);
+    transform: translateY(-90px);
   }
 }
 
@@ -43,6 +43,7 @@
 
   @include vp-1023 {
     margin-left: 0;
+    margin-bottom: -9px;
   }
 }
 
@@ -66,7 +67,7 @@
     font-size: 24px;
     line-height: 33px;
     width: 190px;
-    margin-bottom: 30px;
+    margin-bottom: 19px;
   }
 }
 
