@@ -58,7 +58,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 
   @include vp-1023 {
     width: auto;
@@ -112,12 +112,16 @@
 }
 
 .booking__description-container {
+  padding-top: 179px;
+
   @include vp-1023 {
     margin-bottom: 52px;
+    padding-top: 0;
   }
 
   @include vp-767 {
     margin-bottom: 33px;
+    padding-top: 0;
   }
 }
 

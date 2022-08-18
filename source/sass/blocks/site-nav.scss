@@ -3,7 +3,7 @@
   margin: 0;
   list-style-type: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-wrap: wrap;
 
   @include vp-767 {
@@ -33,12 +33,16 @@
   color: rgba(249, 251, 253, 1);
 
   &:hover {
-    color: rgba(249, 251, 253, 0.5);
+    opacity: 0.5;;
   }
 
   &:focus-visible {
     outline: none;
-    color: rgba(249, 251, 253, 0.5);
+    opacity: 0.5;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 
   @include vp-1023 {

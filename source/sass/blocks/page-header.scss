@@ -31,7 +31,6 @@
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   align-items: center;
   margin: 0 auto;
   max-width: 1160px;
@@ -44,7 +43,7 @@
   }
 
   @include vp-1023 {
-    padding-bottom: 593px;
+    padding-bottom: 582px;
     padding-top: 21px;
     margin: 0;
     width: auto;
@@ -96,6 +95,11 @@
     background-color: rgba(249, 251, 253, 1);
     position: absolute;
     right: 0;
+    min-height: 100%;
+    z-index: 2;
+    align-items: flex-start;
+    box-shadow: -62vw 0vh 6px 193px rgba(0, 0, 0, 0.5);
+    padding-top: 11px;
 
     .page-header__logo-icon {
       fill: rgba(1, 28, 64, 1);
@@ -119,5 +123,15 @@
 
   @include vp-767 {
     fill: rgba(249, 251, 253, 1);
+  }
+}
+
+.page-header__logo {
+  cursor: unset;
+}
+
+.page-header__logo-wrapper {
+  @include vp-767 {
+    z-index: 3;
   }
 }

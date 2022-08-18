@@ -1,15 +1,9 @@
-.contacts {
-  @include vp-767 {
-    transform: translateY(-98px);
-  }
-}
-
 .contacts__wrapper {
   display: flex;
   margin: 0 auto;
   max-width: 1160px;
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 118px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -34,8 +28,9 @@
 
   @include vp-767 {
     width: auto;
-    padding-top: 50px;
-    padding-bottom: 56px;
+    padding-top: 0;
+    margin-top: -50px;
+    padding-bottom: 66px;
     padding-left: 15px;
     padding-right: 15px;
     flex-direction: column;
@@ -49,9 +44,10 @@
   margin-right: 157px;
 
   @include vp-1023 {
-    width: 324px;
+    min-width: 324px;
+    width: auto;
     height: 335px;
-    margin-right: 0;
+    margin-right: 30px;
   }
 
   @include vp-767 {

@@ -14,16 +14,15 @@
   }
 
   @include vp-767 {
-    padding-top: 120px;
+    padding-top: 58px;
     padding-bottom: 8px;
-    transform: translateY(-113px);
   }
 }
 
 .adavantages__container {
   max-width: 1160px;
   margin: 0 auto;
-  padding-top: 106px;
+  padding-top: 109px;
   padding-bottom: 121px;
 
   @include vp-1279 {
@@ -35,8 +34,8 @@
     width: auto;
     padding-left: 45px;
     padding-right: 45px;
-    padding-top: 87px;
-    padding-bottom: 97px;
+    padding-top: 94px;
+    padding-bottom: 101px;
   }
 
   @include vp-767 {
@@ -44,8 +43,7 @@
     padding-left: 15px;
     padding-right: 15px;
     padding-top: 0;
-    padding-bottom: 5px;
-    transform: translateY(-58px);
+    padding-bottom: 67px;
   }
 }
 
@@ -60,6 +58,7 @@
   @include vp-1023 {
     font-size: 26px;
     line-height: 39px;
+    margin-bottom: 43px;
   }
 
   @include vp-767 {
@@ -77,7 +76,6 @@
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 40px;
   row-gap: 40px;
-  margin-right: -10px;
 
   @include vp-1023 {
     grid-template-columns: 1fr 1fr 1fr;
@@ -95,10 +93,10 @@
 .adavantages__list-item {
   position: relative;
   background-color: rgba(249, 251, 253, 1);
-  padding-top: 83px;
+  padding-top: 79px;
   padding-left: 30px;
   padding-right: 30px;
-  padding-bottom: 22px;
+  padding-bottom: 30px;
 
   @include vp-1023 {
     padding-top: 72px;
@@ -120,7 +118,7 @@
   background-position: center;
   background-size: contain;
   left: 30px;
-  top: 29px;
+  top: 26px;
   width: 27px;
   height: 32px;
 
@@ -144,8 +142,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  left: 27px;
-  top: 34px;
+  left: 30px;
+  top: 32px;
   width: 38px;
   height: 21px;
 
@@ -164,8 +162,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  left: 23px;
-  top: 36px;
+  left: 30px;
+  top: 34px;
   width: 42px;
   height: 15px;
 
@@ -185,8 +183,8 @@
   margin: 0;
   font-weight: 500;
   word-wrap: break-word;
-  width: max-content;
-  margin-bottom: 12px;
+  width: auto;
+  margin-bottom: 6px;
   font-size: 18px;
   line-height: 27px;
   max-width: 296px;
@@ -202,7 +200,14 @@
     margin-bottom: 7px;
     font-size: 18px;
     line-height: 25px;
-    width: 170px;
+    min-width: 170px;
+    width: auto;
+  }
+}
+
+.adavantages__list-item:nth-child(2) .adavantages__list-item-name  {
+  @include vp-767 {
+    max-width: 133px;
   }
 }
 
@@ -217,5 +222,11 @@
   @include vp-1023 {
     width: auto;
     line-height: 19.6px;
+  }
+
+  @include vp-767 {
+    width: auto;
+    min-width: 247px;
+    max-width: none;
   }
 }

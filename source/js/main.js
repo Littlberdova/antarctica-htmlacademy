@@ -32,12 +32,15 @@ window.addEventListener('DOMContentLoaded', () => {
       headerWrapper.classList.add('page-header__wrapper--opened');
       header.style.height = '538px';
       document.querySelector('.page-header__logo-icon').style.fill = 'rgba(1, 28, 64, 1)';
+      document.body.style.position = 'fixed';
+
     } else {
       navMain.classList.add('main-nav__menu--closed');
       navMain.classList.remove('main-nav__menu--opened');
       headerWrapper.classList.remove('page-header__wrapper--opened');
       document.querySelector('.page-header__logo-icon').style.fill = 'rgba(249, 251, 253, 1)';
       header.style.height = 'auto';
+      document.body.style.position = 'static';
     }
   });
 

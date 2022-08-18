@@ -2,13 +2,15 @@
   background-color: transparent;
   z-index: 2;
   transform: translateY(-170px);
+  margin-bottom: -170px;
 
   @include vp-1023 {
     transform: translateY(-270px);
+    margin-bottom: -193px;
   }
 
   @include vp-767 {
-    transform: translateY(-345px);
+    transform: translateY(-223px);
   }
 }
 
@@ -20,13 +22,15 @@
   padding-left: 96px;
   padding-right: 198px;
   transform: translateY(-214px);
+  overflow: auto;
+  height: 200px;
 
   @include vp-1023 {
     width: auto;
     margin: 0;
     padding-left: 45px;
     padding-right: 45px;
-    transform: translateY(-118px);
+    transform: translateY(-106px);
   }
 
   @include vp-767 {
@@ -34,7 +38,7 @@
     margin: 0;
     padding-left: 15px;
     padding-right: 15px;
-    transform: translateY(20px);
+    // transform: translateY(20px);
   }
 }
 

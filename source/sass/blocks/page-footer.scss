@@ -1,9 +1,5 @@
 .page-footer {
   background-color: rgba(1, 28, 64, 1);
-
-  @include vp-767 {
-    transform: translateY(-98px);
-  }
 }
 
 .page-footer__wrapper {
@@ -15,7 +11,7 @@
   padding-bottom: 50px;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 
   @include vp-1279 {
     padding-left: 10px;
@@ -44,7 +40,10 @@
 }
 
 .page-footer__logo-wrapper {
-  margin-right: -303px;
+
+  @include vp-1279 {
+    margin-right: 60px;
+  }
 
   @include vp-1023 {
     margin-right: -56px;
@@ -56,7 +55,21 @@
 }
 
 .page-footer__logo-icon {
+  width: 70px;
+  height:38px;
+  margin-right: 0;
+
   @include vp-1023 {
     width: 39px;
+    height: 42px;
+    margin-right: 0;
+    padding-left: 4px;
+    padding-top: 4px;
+  }
+
+  @include vp-1279 {
+    margin-right: 60px;
+    width: 30px;
+    height: 30px;
   }
 }
